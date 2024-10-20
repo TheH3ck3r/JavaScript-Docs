@@ -10,24 +10,24 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>ForEach | JavaScript: Docs</title>
-    <meta name="title" content="ForEach | JavaScript: Docs">
-    <meta name="description" content="forEach- это метод в JavaScript, который используется для выполнения функции обратного вызова один раз для каждого элемента в массиве в порядке их...">
+    <title>Map | JavaScript: Docs</title>
+    <meta name="title" content="Map | JavaScript: Docs">
+    <meta name="description" content="Метод map() в JavaScript представляет собой встроенную функцию для массивов, которая применяет заданную функцию к каждому элементу массива и создает...">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/f/foreach/">
+    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/m/map/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/f/foreach/">
-    <meta property="og:title" content="ForEach | JavaScript: Docs">
-    <meta property="og:description" content="forEach- это метод в JavaScript, который используется для выполнения функции обратного вызова один раз для каждого элемента в массиве в порядке их...">
+    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/m/map/">
+    <meta property="og:title" content="Map | JavaScript: Docs">
+    <meta property="og:description" content="Метод map() в JavaScript представляет собой встроенную функцию для массивов, которая применяет заданную функцию к каждому элементу массива и создает...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/f/foreach/">
-    <meta property="twitter:title" content="ForEach | JavaScript: Docs">
-    <meta property="twitter:description" content="forEach- это метод в JavaScript, который используется для выполнения функции обратного вызова один раз для каждого элемента в массиве в порядке их...">
+    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/m/map/">
+    <meta property="twitter:title" content="Map | JavaScript: Docs">
+    <meta property="twitter:description" content="Метод map() в JavaScript представляет собой встроенную функцию для массивов, которая применяет заданную функцию к каждому элементу массива и создает...">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -244,52 +244,70 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="foreach" class="break-words">
+<doc-anchor-target id="map" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#foreach">#</doc-anchor-trigger>
-        <span>ForEach</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#map">#</doc-anchor-trigger>
+        <span>Map</span>
     </h1>
 </doc-anchor-target>
-<p><code v-pre>forEach</code> - это метод в JavaScript, который используется для выполнения функции обратного вызова один раз для каждого элемента в массиве в порядке их возрастания.</p>
-<p>Синтаксис: <code v-pre>array.forEach(function(currentValue, index, array) { Код }, thisArg)</code></p>
+<p>Метод <code v-pre>map()</code> в JavaScript представляет собой встроенную функцию для массивов, которая применяет заданную функцию к каждому элементу массива и создает новый массив на основе результатов вызовов этой функции. Оригинальный массив остается неизменным.</p>
+<p>Синтаксис: <code v-pre>const newArray = array.map((currentValue, index, array) =&gt; { Логика })</code></p>
 <ul>
+<li><code v-pre>array</code>: Исходный массив, над которым применяется метод map().</li>
 <li><code v-pre>currentValue</code>: Текущий обрабатываемый элемент массива.</li>
-<li><code v-pre>index</code>: Индекс текущего элемента в массиве.</li>
-<li><code v-pre>array</code>: Ссылка на массив, по которому происходит итерация.</li>
-<li><code v-pre>thisArg</code> (необязательный): Значение, используемое в качестве <code v-pre>this</code> при выполнении функции обратного вызова.</li>
+<li><code v-pre>index</code>: Индекс текущего элемента.</li>
+<li><code v-pre>array</code>: Ссылка на исходный массив.</li>
 </ul>
-<doc-anchor-target id="пример-использования-foreach">
+<doc-anchor-target id="основное">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-foreach">#</doc-anchor-trigger>
-        <span>Пример использования <code v-pre>forEach</code>:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#основное">#</doc-anchor-trigger>
+        <span>Основное</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li><code v-pre>map()</code> проходит по каждому элементу исходного массива, вызывая переданную функцию для каждого элемента.</li>
+<li>Возвращаемое значение функции становится элементом нового массива, который будет создан <code v-pre>map()</code>.</li>
+<li>Результирующий массив имеет ту же длину, что и исходный.</li>
+<li>Исходный массив остается неизменным.</li>
+</ul>
+<doc-anchor-target id="пример-использования-map">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-map">#</doc-anchor-trigger>
+        <span>Пример использования <code v-pre>map()</code></span>
     </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">let numbers = [1, 2, 3, 4, 5];
+<pre class="language-javascript"><code v-pre class="language-javascript">const numbers = [1, 2, 3, 4, 5];
 
-numbers.forEach(function (number, index, array) {
-  console.log(`Индекс ${index}: ${number}`);
+const doubledNumbers = numbers.map((num) =&gt; {
+  return num * 2;
 });
 
-// Вывод:
-// Индекс 0: 1
-// Индекс 1: 2
-// Индекс 2: 3
-// Индекс 3: 4
-// Индекс 4: 5</code></pre>
+console.log(doubledNumbers); // Вывод: [2, 4, 6, 8, 10]</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="примечания">
+<p>В приведенном примере для каждого элемента массива <code v-pre>numbers</code> мы умножаем его на 2 с помощью функции, переданной методу <code v-pre>map()</code>. Результаты этих операций сохраняются в новом массиве <code v-pre>doubledNumbers</code>.</p>
+<doc-anchor-target id="использование-map-для-преобразования-объектов">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#примечания">#</doc-anchor-trigger>
-        <span>Примечания</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#использование-map-для-преобразования-объектов">#</doc-anchor-trigger>
+        <span>Использование map для преобразования объектов</span>
     </h4>
 </doc-anchor-target>
-<ul>
-<li><code v-pre>forEach</code> не возвращает новый массив. Он просто выполняет функцию обратного вызова для каждого элемента массива.</li>
-<li>Если функция обратного вызова изменяет массив, эти изменения видны в оригинальном массиве.</li>
-<li>Если вам нужно создать новый массив на основе существующего, лучше использовать методы <code v-pre>map</code> или <code v-pre>filter</code>.</li>
-</ul>
-<p><code v-pre>forEach</code> удобен, когда вам нужно выполнить операцию для каждого элемента массива без создания нового массива.</p>
+<p><code v-pre>map()</code> также может использоваться для преобразования массива объектов, возвращая новый массив с определенными свойствами объектов:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const users = [
+  { name: &quot;Alice&quot;, age: 30 },
+  { name: &quot;Bob&quot;, age: 25 },
+  { name: &quot;Eve&quot;, age: 35 },
+];
+
+const names = users.map((user) =&gt; {
+  return user.name;
+});
+
+console.log(names); // Вывод: ['Alice', 'Bob', 'Eve']</code></pre>
+</doc-codeblock></div>
+<p>В примере мы создаем новый массив, содержащий имена пользователей из массива объектов <code v-pre>users</code> с помощью <code v-pre>map()</code>.</p>
+<p><code v-pre>map()</code> - мощный инструмент для преобразования данных в массивах, часто используется для обработки элементов и создания новых массивов на основе существующих данных.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -299,20 +317,20 @@ numbers.forEach(function (number, index, array) {
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../f/filter/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../l/localecompare/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Filter</span>
+                                                <span class="block mt-1">Locale​Compare</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../i/includes/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../m/match/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Includes</span>
+                                                <span class="block mt-1">Match</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -356,6 +374,6 @@ numbers.forEach(function (number, index, array) {
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "ForEach", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Map", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

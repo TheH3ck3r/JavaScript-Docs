@@ -10,24 +10,24 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>ForEach | JavaScript: Docs</title>
-    <meta name="title" content="ForEach | JavaScript: Docs">
-    <meta name="description" content="forEach- это метод в JavaScript, который используется для выполнения функции обратного вызова один раз для каждого элемента в массиве в порядке их...">
+    <title>New | JavaScript: Docs</title>
+    <meta name="title" content="New | JavaScript: Docs">
+    <meta name="description" content="В JavaScript оператор new используется для создания новых объектов с использованием конструктора.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/f/foreach/">
+    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/n/new/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/f/foreach/">
-    <meta property="og:title" content="ForEach | JavaScript: Docs">
-    <meta property="og:description" content="forEach- это метод в JavaScript, который используется для выполнения функции обратного вызова один раз для каждого элемента в массиве в порядке их...">
+    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/n/new/">
+    <meta property="og:title" content="New | JavaScript: Docs">
+    <meta property="og:description" content="В JavaScript оператор new используется для создания новых объектов с использованием конструктора.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/f/foreach/">
-    <meta property="twitter:title" content="ForEach | JavaScript: Docs">
-    <meta property="twitter:description" content="forEach- это метод в JavaScript, который используется для выполнения функции обратного вызова один раз для каждого элемента в массиве в порядке их...">
+    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/n/new/">
+    <meta property="twitter:title" content="New | JavaScript: Docs">
+    <meta property="twitter:description" content="В JavaScript оператор new используется для создания новых объектов с использованием конструктора.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -244,52 +244,38 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="foreach" class="break-words">
+<doc-anchor-target id="new" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#foreach">#</doc-anchor-trigger>
-        <span>ForEach</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new">#</doc-anchor-trigger>
+        <span>New</span>
     </h1>
 </doc-anchor-target>
-<p><code v-pre>forEach</code> - это метод в JavaScript, который используется для выполнения функции обратного вызова один раз для каждого элемента в массиве в порядке их возрастания.</p>
-<p>Синтаксис: <code v-pre>array.forEach(function(currentValue, index, array) { Код }, thisArg)</code></p>
-<ul>
-<li><code v-pre>currentValue</code>: Текущий обрабатываемый элемент массива.</li>
-<li><code v-pre>index</code>: Индекс текущего элемента в массиве.</li>
-<li><code v-pre>array</code>: Ссылка на массив, по которому происходит итерация.</li>
-<li><code v-pre>thisArg</code> (необязательный): Значение, используемое в качестве <code v-pre>this</code> при выполнении функции обратного вызова.</li>
-</ul>
-<doc-anchor-target id="пример-использования-foreach">
+<p>В JavaScript оператор <code v-pre>new</code> используется для создания новых объектов с использованием конструктора. Он позволяет создавать экземпляры пользовательских объектов, определенных с помощью функций-конструкторов.</p>
+<ol>
+<li><strong>Создание объекта</strong>: Когда вы используете оператор <code v-pre>new</code>, он создает новый пустой объект.</li>
+<li><strong>Связывание с конструктором</strong>: Оператор <code v-pre>new</code> связывает этот новый объект с функцией-конструктором. То есть, создается связь между объектом и функцией, чтобы функция могла инициализировать этот объект.</li>
+<li><strong>Инициализация</strong>: Функция-конструктор выполняется, и внутри нее вы можете инициализировать созданный объект, устанавливая его свойства и методы.</li>
+<li><strong>Возврат объекта</strong>: По умолчанию, оператор <code v-pre>new</code> возвращает созданный объект. Это означает, что если функция-конструктор не содержит явного оператора <code v-pre>return</code>, будет возвращен созданный объект.</li>
+</ol>
+<doc-anchor-target id="пример-использования-new">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-foreach">#</doc-anchor-trigger>
-        <span>Пример использования <code v-pre>forEach</code>:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-new">#</doc-anchor-trigger>
+        <span>Пример использования <code v-pre>new()</code>:</span>
     </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">let numbers = [1, 2, 3, 4, 5];
+<pre class="language-javascript"><code v-pre class="language-javascript">function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
 
-numbers.forEach(function (number, index, array) {
-  console.log(`Индекс ${index}: ${number}`);
-});
+const person1 = new Person(&quot;Alice&quot;, 30);
 
-// Вывод:
-// Индекс 0: 1
-// Индекс 1: 2
-// Индекс 2: 3
-// Индекс 3: 4
-// Индекс 4: 5</code></pre>
+console.log(person1.name); // Выведет 'Alice'
+console.log(person1.age); // Выведет 30</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="примечания">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#примечания">#</doc-anchor-trigger>
-        <span>Примечания</span>
-    </h4>
-</doc-anchor-target>
-<ul>
-<li><code v-pre>forEach</code> не возвращает новый массив. Он просто выполняет функцию обратного вызова для каждого элемента массива.</li>
-<li>Если функция обратного вызова изменяет массив, эти изменения видны в оригинальном массиве.</li>
-<li>Если вам нужно создать новый массив на основе существующего, лучше использовать методы <code v-pre>map</code> или <code v-pre>filter</code>.</li>
-</ul>
-<p><code v-pre>forEach</code> удобен, когда вам нужно выполнить операцию для каждого элемента массива без создания нового массива.</p>
+<p>В этом примере мы создаем объект <code v-pre>person1</code> с помощью функции-конструктора <code v-pre>Person</code> с использованием оператора <code v-pre>new</code>. Функция-конструктор устанавливает свойства <code v-pre>name</code> и <code v-pre>age</code> для объекта <code v-pre>person1</code>.</p>
+<p>Оператор <code v-pre>new</code> также может быть использован для создания экземпляров встроенных объектов, таких как <code v-pre>Array</code>, <code v-pre>Date</code>, <code v-pre>RegExp</code>, и других, а также для создания экземпляров пользовательских классов, если вы используете классы (введенные в ECMAScript 2015 и более новых версиях).</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -299,20 +285,20 @@ numbers.forEach(function (number, index, array) {
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../f/filter/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../m/math/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Filter</span>
+                                                <span class="block mt-1">Math</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../i/includes/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../фишки/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Includes</span>
+                                                <span class="block mt-1">Фишки</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -356,6 +342,6 @@ numbers.forEach(function (number, index, array) {
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "ForEach", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "New", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
