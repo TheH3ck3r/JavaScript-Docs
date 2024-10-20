@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://10.10.10.5:10002/sitemap.xml.gz
+Sitemap: https://theh3ck3r.github.io/javascript-docs/sitemap.xml.gz
