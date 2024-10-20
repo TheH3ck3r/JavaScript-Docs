@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://10.10.10.5:10002/sitemap.xml.gz
