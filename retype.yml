@@ -1,18 +1,35 @@
 input: .
 output: .retype
 url: https://theh3ck3r.github.io/javascript-docs/
+
 branding:
   title: "JavaScript"
   label: Docs
   logo: uploads/javascript.svg
+
 favicon: uploads/javascript.svg
+
 links:
-  - text: Getting Started
-    link: https://retype.com/guides/getting-started/
+  - text: Главная
+    link: https://theh3ck3r.github.io/JavaScript-Docs/
+    icon: home
+  - text: Репозиторий
+    link: https://github.com/TheH3ck3r/JavaScript-Docs
+    icon: repo
+  - text: Github
+    link: https://github.com/TheH3ck3r
+    icon: mark-github
+  - text: Retype
+    link: https://retype.com/
+    icon: rocket
+
 gravatar:
   enabled: true
+
 meta:
   title: " | JavaScript: Docs"
-poweredByRetype: false
+
+poweredByRetype: false # Нужна про версия для того, чтобы это работало
+
 footer:
   copyright: "Документация TheHacker по JS"
