@@ -1,0 +1,18 @@
+input: .
+output: .retype
+url: http://10.10.10.5:10002/
+branding:
+  title: "JavaScript"
+  label: Docs
+  logo: uploads/javascript.svg
+favicon: uploads/javascript.svg
+links:
+  - text: Getting Started
+    link: https://retype.com/guides/getting-started/
+gravatar:
+  enabled: true
+meta:
+  title: " | JavaScript: Docs"
+poweredByRetype: false
+footer:
+  copyright: "Документация TheHacker по JS"
