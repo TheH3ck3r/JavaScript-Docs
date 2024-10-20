@@ -29,14 +29,14 @@ console.log(boundGetX()); // 42, контекст теперь привязан 
 
 **Пример 1**
 
-````js
+```js
 function multiply(x, y) {
   return x * y;
 }
 
 const multiplyByTwo = multiply.bind(null, 2); // Привязываем 2 к первому аргументу
-console.log(multiplyByTwo(5)); // Результат: 2 * 5 = 10```
-````
+console.log(multiplyByTwo(5)); // Результат: 2 * 5 = 10
+```
 
 **Пример 2**
 
