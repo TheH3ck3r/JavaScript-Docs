@@ -10,24 +10,24 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Exec | JavaScript: Docs</title>
-    <meta name="title" content="Exec | JavaScript: Docs">
-    <meta name="description" content="exec- это метод объекта регулярного выражения ( RegExp), который используется для поиска совпадений в строке и извлечения информации из этой строки.">
+    <title>Instanceof | JavaScript: Docs</title>
+    <meta name="title" content="Instanceof | JavaScript: Docs">
+    <meta name="description" content="Оператор instanceof в JavaScript используется для проверки, принадлежит ли объект определенному классу или является ли он экземпляром определенного...">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/e/exec/">
+    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/i/instanceof/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/e/exec/">
-    <meta property="og:title" content="Exec | JavaScript: Docs">
-    <meta property="og:description" content="exec- это метод объекта регулярного выражения ( RegExp), который используется для поиска совпадений в строке и извлечения информации из этой строки.">
+    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/i/instanceof/">
+    <meta property="og:title" content="Instanceof | JavaScript: Docs">
+    <meta property="og:description" content="Оператор instanceof в JavaScript используется для проверки, принадлежит ли объект определенному классу или является ли он экземпляром определенного...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/e/exec/">
-    <meta property="twitter:title" content="Exec | JavaScript: Docs">
-    <meta property="twitter:description" content="exec- это метод объекта регулярного выражения ( RegExp), который используется для поиска совпадений в строке и извлечения информации из этой строки.">
+    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/i/instanceof/">
+    <meta property="twitter:title" content="Instanceof | JavaScript: Docs">
+    <meta property="twitter:description" content="Оператор instanceof в JavaScript используется для проверки, принадлежит ли объект определенному классу или является ли он экземпляром определенного...">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -244,82 +244,51 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="exec" class="break-words">
+<doc-anchor-target id="instanceof" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#exec">#</doc-anchor-trigger>
-        <span>Exec</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#instanceof">#</doc-anchor-trigger>
+        <span>Instanceof</span>
     </h1>
 </doc-anchor-target>
-<p><code v-pre>exec</code> - это метод объекта регулярного выражения (<code v-pre>RegExp</code>), который используется для поиска совпадений в строке и извлечения информации из этой строки.</p>
-<p>Синтаксис: <code v-pre>regexp.exec(string)</code></p>
+<p>Оператор <code v-pre>instanceof</code> в JavaScript используется для проверки, принадлежит ли объект определенному классу или является ли он экземпляром определенного типа. Также этот оператор позволяет определить, был ли объект создан с использованием конкретного конструктора.</p>
+<p>Синтаксис: <code v-pre>object instanceof constructor</code></p>
 <ul>
-<li><code v-pre>regexp</code>: Это объект регулярного выражения, на котором вызывается метод <code v-pre>exec</code>.</li>
-<li><code v-pre>string</code>: Это строка, в которой будет производиться поиск совпадений.</li>
+<li><code v-pre>object</code>: Объект, который вы хотите проверить.</li>
+<li><code v-pre>constructor</code>: Функция, которая представляет класс или тип.</li>
 </ul>
-<doc-anchor-target id="возвращаемое-значение">
+<doc-anchor-target id="пример-использования-instanceof">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#возвращаемое-значение">#</doc-anchor-trigger>
-        <span>Возвращаемое значение:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-instanceof">#</doc-anchor-trigger>
+        <span>Пример использования <code v-pre>instanceof</code>:</span>
     </h4>
 </doc-anchor-target>
-<p>Метод <code v-pre>exec</code> возвращает массив с совпадениями:</p>
-<ul>
-<li>Если совпадение найдено, метод возвращает массив, в котором первый элемент - это совпадение, а последующие элементы - это значения групп совпадений, если они были определены в регулярном выражении.</li>
-<li>Если совпадение не найдено, метод возвращает <code v-pre>null</code>.</li>
-</ul>
-<doc-anchor-target id="примеры-использования-exec">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#примеры-использования-exec">#</doc-anchor-trigger>
-        <span>Примеры использования exec:</span>
-    </h4>
-</doc-anchor-target>
-<p><strong>Извлечение даты из строки:</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const text = &quot;Дата: 28-10-2023&quot;;
-const regex = /(\d{2})-(\d{2})-(\d{4})/;
-const match = regex.exec(text);
-
-if (match) {
-  console.log(&quot;Дата: &quot; + match[0]); // &quot;Дата: 28-10-2023&quot;
-  console.log(&quot;День: &quot; + match[1]); // &quot;28&quot;
-  console.log(&quot;Месяц: &quot; + match[2]); // &quot;10&quot;
-  console.log(&quot;Год: &quot; + match[3]); // &quot;2023&quot;
-} else {
-  console.log(&quot;Дата не найдена.&quot;);
+<pre class="language-javascript"><code v-pre class="language-javascript">function Car(make, model) {
+  this.make = make;
+  this.model = model;
 }
 
-// Выведет: Дата: 28-10-2023
-// День: 28
-// Месяц: 10
-// Год: 2023</code></pre>
+const myCar = new Car(&quot;Toyota&quot;, &quot;Camry&quot;);
+
+console.log(myCar instanceof Car); // Вывод: true
+console.log(myCar instanceof Object); // Вывод: true
+console.log(myCar instanceof Array); // Вывод: false</code></pre>
 </doc-codeblock></div>
-<p><strong>Поиск всех чисел в тексте:</strong></p>
+<p>В данном примере <code v-pre>myCar</code> является экземпляром объекта <code v-pre>Car</code>, поэтому <code v-pre>myCar instanceof Car</code> возвращает <code v-pre>true</code>. Он также является экземпляром объекта <code v-pre>Object</code>, так как все объекты в JavaScript являются экземплярами <code v-pre>Object</code>. Однако, <code v-pre>myCar instanceof Array</code> возвращает <code v-pre>false</code>, потому что <code v-pre>myCar</code> не является массивом.</p>
+<p>Когда вы используете <code v-pre>instanceof</code>, он проверяет цепочку прототипов объекта. Если объект является экземпляром класса (или конструктора), или его прототип является экземпляром этого класса, то оператор <code v-pre>instanceof</code> возвращает <code v-pre>true</code>, иначе - <code v-pre>false</code>.</p>
+<p><strong>Например:</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const text = &quot;Текст с числами: 42 и 123.45 и -7&quot;;
-const regex = /\b-?\d+(\.\d+)?\b/g;
-let match;
+<pre class="language-javascript"><code v-pre class="language-javascript">function Animal() {}
+function Dog() {}
 
-while ((match = regex.exec(text)) !== null) {
-  console.log(&quot;Найдено число: &quot; + match[0]);
-}
+Dog.prototype = new Animal();
 
-// Выведет: Найдено число: 42
-// Найдено число: 123.45
-// Найдено число: 7</code></pre>
+const myDog = new Dog();
+
+console.log(myDog instanceof Dog); // Вывод: true
+console.log(myDog instanceof Animal); // Вывод: true</code></pre>
 </doc-codeblock></div>
-<p><strong>Поиск всех слов, начинающихся с буквы &quot;A&quot;:</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const text = &quot;Apple, Banana, Avocado, Cherry&quot;;
-const regex = /\bA\w+\b/g;
-let match;
-
-while ((match = regex.exec(text)) !== null) {
-  console.log(&quot;Слово на 'A': &quot; + match[0]);
-}
-
-// Выведет: Слово на 'A': Apple
-// Слово на 'A': Avocado</code></pre>
-</doc-codeblock></div>
+<p>Здесь <code v-pre>myDog</code> является экземпляром <code v-pre>Dog</code>, но также является экземпляром <code v-pre>Animal</code>, так как <code v-pre>Dog.prototype</code> был установлен как экземпляр <code v-pre>Animal</code>.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -329,20 +298,20 @@ while ((match = regex.exec(text)) !== null) {
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../e/every/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../i/indexof/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Every</span>
+                                                <span class="block mt-1">Index​Of</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../f/filter/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../фишки/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Filter</span>
+                                                <span class="block mt-1">Фишки</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -386,6 +355,6 @@ while ((match = regex.exec(text)) !== null) {
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Exec", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Instanceof", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

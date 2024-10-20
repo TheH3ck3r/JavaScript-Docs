@@ -10,24 +10,24 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Exec | JavaScript: Docs</title>
-    <meta name="title" content="Exec | JavaScript: Docs">
-    <meta name="description" content="exec- это метод объекта регулярного выражения ( RegExp), который используется для поиска совпадений в строке и извлечения информации из этой строки.">
+    <title>IndexOf | JavaScript: Docs</title>
+    <meta name="title" content="IndexOf | JavaScript: Docs">
+    <meta name="description" content="Метод indexOf в JavaScript используется для поиска первого вхождения заданного элемента в массиве или строки.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/e/exec/">
+    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/i/indexof/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/e/exec/">
-    <meta property="og:title" content="Exec | JavaScript: Docs">
-    <meta property="og:description" content="exec- это метод объекта регулярного выражения ( RegExp), который используется для поиска совпадений в строке и извлечения информации из этой строки.">
+    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/i/indexof/">
+    <meta property="og:title" content="IndexOf | JavaScript: Docs">
+    <meta property="og:description" content="Метод indexOf в JavaScript используется для поиска первого вхождения заданного элемента в массиве или строки.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/e/exec/">
-    <meta property="twitter:title" content="Exec | JavaScript: Docs">
-    <meta property="twitter:description" content="exec- это метод объекта регулярного выражения ( RegExp), который используется для поиска совпадений в строке и извлечения информации из этой строки.">
+    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/i/indexof/">
+    <meta property="twitter:title" content="IndexOf | JavaScript: Docs">
+    <meta property="twitter:description" content="Метод indexOf в JavaScript используется для поиска первого вхождения заданного элемента в массиве или строки.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -244,82 +244,60 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="exec" class="break-words">
+<doc-anchor-target id="indexof" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#exec">#</doc-anchor-trigger>
-        <span>Exec</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#indexof">#</doc-anchor-trigger>
+        <span>IndexOf</span>
     </h1>
 </doc-anchor-target>
-<p><code v-pre>exec</code> - это метод объекта регулярного выражения (<code v-pre>RegExp</code>), который используется для поиска совпадений в строке и извлечения информации из этой строки.</p>
-<p>Синтаксис: <code v-pre>regexp.exec(string)</code></p>
+<p>Метод <code v-pre>indexOf</code> в JavaScript используется для поиска первого вхождения заданного элемента в массиве или строки.</p>
+<p>Синтаксис для массивов: <code v-pre>array.indexOf(searchElement, startIndex)</code></p>
+<p>Синтаксис для строк: <code v-pre>string.indexOf(searchValue, startIndex)</code></p>
 <ul>
-<li><code v-pre>regexp</code>: Это объект регулярного выражения, на котором вызывается метод <code v-pre>exec</code>.</li>
-<li><code v-pre>string</code>: Это строка, в которой будет производиться поиск совпадений.</li>
+<li><code v-pre>array</code> или <code v-pre>string</code>: Это массив или строка, в которых вы хотите выполнить поиск.</li>
+<li><code v-pre>searchElement</code> или <code v-pre>searchValue</code>: Это элемент или значение, которое вы ищете.</li>
+<li><code v-pre>startIndex</code> (опционально): Это индекс, с которого начнется поиск. Если не указан, поиск начнется с начала массива или строки.</li>
 </ul>
-<doc-anchor-target id="возвращаемое-значение">
+<p><code v-pre>indexOf</code> возвращает индекс первого вхождения элемента (или значения) в массиве или строке. Если элемент (или значение) не найдено, метод возвращает -1.</p>
+<doc-anchor-target id="примеры-использования-indexof-для-массивов">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#возвращаемое-значение">#</doc-anchor-trigger>
-        <span>Возвращаемое значение:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#примеры-использования-indexof-для-массивов">#</doc-anchor-trigger>
+        <span>Примеры использования <code v-pre>indexOf</code> для массивов:</span>
     </h4>
 </doc-anchor-target>
-<p>Метод <code v-pre>exec</code> возвращает массив с совпадениями:</p>
-<ul>
-<li>Если совпадение найдено, метод возвращает массив, в котором первый элемент - это совпадение, а последующие элементы - это значения групп совпадений, если они были определены в регулярном выражении.</li>
-<li>Если совпадение не найдено, метод возвращает <code v-pre>null</code>.</li>
-</ul>
-<doc-anchor-target id="примеры-использования-exec">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const colors = [&quot;красный&quot;, &quot;синий&quot;, &quot;зеленый&quot;, &quot;желтый&quot;, &quot;синий&quot;];
+
+// Найти индекс первого вхождения 'синий'
+const firstBlueIndex = colors.indexOf(&quot;синий&quot;);
+console.log(firstBlueIndex); // 1
+
+// Найти индекс 'синий', начиная с индекса 2
+const secondBlueIndex = colors.indexOf(&quot;синий&quot;, 2);
+console.log(secondBlueIndex); // 4
+
+// Поиск элемента, который отсутствует в массиве
+const notFoundIndex = colors.indexOf(&quot;оранжевый&quot;);
+console.log(notFoundIndex); // -1</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="примеры-использования-indexof-для-строк">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#примеры-использования-exec">#</doc-anchor-trigger>
-        <span>Примеры использования exec:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#примеры-использования-indexof-для-строк">#</doc-anchor-trigger>
+        <span>Примеры использования <code v-pre>indexOf</code> для строк:</span>
     </h4>
 </doc-anchor-target>
-<p><strong>Извлечение даты из строки:</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const text = &quot;Дата: 28-10-2023&quot;;
-const regex = /(\d{2})-(\d{2})-(\d{4})/;
-const match = regex.exec(text);
+<pre class="language-javascript"><code v-pre class="language-javascript">const text = &quot;Пример строки для поиска&quot;;
 
-if (match) {
-  console.log(&quot;Дата: &quot; + match[0]); // &quot;Дата: 28-10-2023&quot;
-  console.log(&quot;День: &quot; + match[1]); // &quot;28&quot;
-  console.log(&quot;Месяц: &quot; + match[2]); // &quot;10&quot;
-  console.log(&quot;Год: &quot; + match[3]); // &quot;2023&quot;
-} else {
-  console.log(&quot;Дата не найдена.&quot;);
-}
+// Найти индекс первого вхождения 'строка'
+const firstIndex = text.indexOf(&quot;строка&quot;);
+console.log(firstIndex); // 8
 
-// Выведет: Дата: 28-10-2023
-// День: 28
-// Месяц: 10
-// Год: 2023</code></pre>
+// Найти индекс 'строка', начиная с индекса 10
+const secondIndex = text.indexOf(&quot;строка&quot;, 10);
+console.log(secondIndex); // -1, так как второе вхождение отсутствует</code></pre>
 </doc-codeblock></div>
-<p><strong>Поиск всех чисел в тексте:</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const text = &quot;Текст с числами: 42 и 123.45 и -7&quot;;
-const regex = /\b-?\d+(\.\d+)?\b/g;
-let match;
-
-while ((match = regex.exec(text)) !== null) {
-  console.log(&quot;Найдено число: &quot; + match[0]);
-}
-
-// Выведет: Найдено число: 42
-// Найдено число: 123.45
-// Найдено число: 7</code></pre>
-</doc-codeblock></div>
-<p><strong>Поиск всех слов, начинающихся с буквы &quot;A&quot;:</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const text = &quot;Apple, Banana, Avocado, Cherry&quot;;
-const regex = /\bA\w+\b/g;
-let match;
-
-while ((match = regex.exec(text)) !== null) {
-  console.log(&quot;Слово на 'A': &quot; + match[0]);
-}
-
-// Выведет: Слово на 'A': Apple
-// Слово на 'A': Avocado</code></pre>
-</doc-codeblock></div>
+<p>Метод <code v-pre>indexOf</code> полезен при поиске элементов или подстрок в данных и при принятии решений на основе их наличия в массиве или строке.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -329,20 +307,20 @@ while ((match = regex.exec(text)) !== null) {
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../e/every/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../i/includes/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Every</span>
+                                                <span class="block mt-1">Includes</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../f/filter/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../i/instanceof/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Filter</span>
+                                                <span class="block mt-1">Instanceof</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -386,6 +364,6 @@ while ((match = regex.exec(text)) !== null) {
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Exec", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "IndexOf", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
