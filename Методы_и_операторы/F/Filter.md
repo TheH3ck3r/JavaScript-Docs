@@ -47,4 +47,6 @@ const affordableProducts = products.filter((product) => product.price < 2.0);
 console.log(affordableProducts); // Выведет: [{ name: "Banana", price: 0.99 }]
 ```
 
+#### Заключение
+
 `filter()` полезен для выбора подмножества элементов массива, которые соответствуют определенным критериям, и создания нового массива на основе этих элементов.
