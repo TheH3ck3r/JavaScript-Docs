@@ -10,24 +10,24 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Reduce | JavaScript: Docs</title>
-    <meta name="title" content="Reduce | JavaScript: Docs">
-    <meta name="description" content="Метод reduce() в JavaScript — один из самых мощных и гибких методов для работы с массивами.">
+    <title>Splice | JavaScript: Docs</title>
+    <meta name="title" content="Splice | JavaScript: Docs">
+    <meta name="description" content="splice- это метод массива в JavaScript, который позволяет изменять содержимое массива путем удаления, замены или добавления элементов.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/r/reduce/">
+    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/s/splice/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/r/reduce/">
-    <meta property="og:title" content="Reduce | JavaScript: Docs">
-    <meta property="og:description" content="Метод reduce() в JavaScript — один из самых мощных и гибких методов для работы с массивами.">
+    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/s/splice/">
+    <meta property="og:title" content="Splice | JavaScript: Docs">
+    <meta property="og:description" content="splice- это метод массива в JavaScript, который позволяет изменять содержимое массива путем удаления, замены или добавления элементов.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/r/reduce/">
-    <meta property="twitter:title" content="Reduce | JavaScript: Docs">
-    <meta property="twitter:description" content="Метод reduce() в JavaScript — один из самых мощных и гибких методов для работы с массивами.">
+    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/s/splice/">
+    <meta property="twitter:title" content="Splice | JavaScript: Docs">
+    <meta property="twitter:description" content="splice- это метод массива в JavaScript, который позволяет изменять содержимое массива путем удаления, замены или добавления элементов.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -244,24 +244,18 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="reduce" class="break-words">
+<doc-anchor-target id="splice" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#reduce">#</doc-anchor-trigger>
-        <span>Reduce</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#splice">#</doc-anchor-trigger>
+        <span>Splice</span>
     </h1>
 </doc-anchor-target>
-<p>Метод <code v-pre>reduce()</code> в JavaScript — один из самых мощных и гибких методов для работы с массивами. Он используется для последовательного применения функции к элементам массива с целью свести его к единому значению (например, сумме, произведению или объекту).</p>
-<p>Синтаксис: <code v-pre>array.reduce(callback(accumulator, currentValue, currentIndex, array),initialValue</code></p>
+<p><code v-pre>splice</code> - это метод массива в JavaScript, который позволяет изменять содержимое массива путем удаления, замены или добавления элементов. Он может быть использован для удаления элементов из массива, вставки новых элементов по указанной позиции или замены существующих элементов массива.</p>
+<p>Синтаксис: <code v-pre>array.splice(start, deleteCount, item1, item2, ...)</code></p>
 <ul>
-<li><code v-pre>callback</code> — функция, которая выполняется для каждого элемента массива. Эта функция принимает следующие аргументы:
-<ul>
-<li><code v-pre>accumulator</code> — аккумулятор, который накапливает результат. Он и будет тем итоговым значением, которое вернет <code v-pre>reduce()</code>.</li>
-<li><code v-pre>currentValue</code> — текущий элемент массива, который обрабатывается на данном шаге.</li>
-<li><code v-pre>currentIndex</code> (необязательный) — индекс текущего элемента (начиная с <code v-pre>0</code> или с <code v-pre>1</code>, если передан <code v-pre>initialValue</code>).</li>
-<li><code v-pre>array</code> (необязательный) — исходный массив, к которому применяется <code v-pre>reduce()</code>.</li>
-</ul>
-</li>
-<li><code v-pre>initialValue</code> (необязательный) — начальное значение аккумулятора. Если не указано, то <code v-pre>accumulator</code> принимает значение первого элемента массива, а перебор начинается со второго элемента.</li>
+<li><code v-pre>start</code>: индекс элемента, с которого начинается изменение массива. Если значение отрицательное, то отсчет производится с конца массива. Если значение больше или равно длине массива, то изменения будут происходить с конца массива.</li>
+<li><code v-pre>deleteCount</code>: количество удаляемых элементов из массива начиная с индекса <code v-pre>start</code>. Если <code v-pre>deleteCount</code> равно <code v-pre>0</code>, ни одного элемента не будет удалено.</li>
+<li><code v-pre>item1, item2, ...</code>: элементы, которые должны быть добавлены в массив, начиная с позиции <code v-pre>start</code>.</li>
 </ul>
 <doc-anchor-target id="возвращаемое-значение">
     <h4>
@@ -269,118 +263,32 @@
         <span>Возвращаемое значение:</span>
     </h4>
 </doc-anchor-target>
-<p>Метод <code v-pre>reduce()</code> возвращает одно итоговое значение, которое получается в результате последовательного применения функции-обработчика ко всем элементам массива.</p>
-<doc-anchor-target id="пример-использования-reduce">
+<p>Метод <code v-pre>splice</code> возвращает массив из удаленных элементов или пустой массив, если ни один элемент не был удален.</p>
+<doc-anchor-target id="примеры-использования-splice">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-reduce">#</doc-anchor-trigger>
-        <span>Пример использования <code v-pre>reduce()</code>:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#примеры-использования-splice">#</doc-anchor-trigger>
+        <span>Примеры использования <code v-pre>splice</code>:</span>
     </h4>
 </doc-anchor-target>
-<p><strong>Сумма всех элементов массива</strong></p>
+<p><strong>Удаление элемента из массива:</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const fruits = [&quot;яблоко&quot;, &quot;груша&quot;, &quot;банан&quot;, &quot;апельсин&quot;];
+const removedFruit = fruits.splice(1, 1);
+console.log(fruits); // ['яблоко', 'банан', 'апельсин']
+console.log(removedFruit); // ['груша']</code></pre>
+</doc-codeblock></div>
+<p><strong>Замена элементов массива:</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-javascript"><code v-pre class="language-javascript">const numbers = [1, 2, 3, 4, 5];
-
-// Пример с явным указанием начального значения (initialValue = 0)
-const sum = numbers.reduce((accumulator, currentValue) =&gt; {
-  return accumulator + currentValue;
-}, 0);
-
-console.log(sum); // 15</code></pre>
+const replacedNumbers = numbers.splice(2, 2, 6, 7);
+console.log(numbers); // [1, 2, 6, 7, 5]
+console.log(replacedNumbers); // [3, 4]</code></pre>
 </doc-codeblock></div>
-<ul>
-<li><strong><code v-pre>accumulator</code></strong> накапливает сумму элементов.</li>
-<li><strong><code v-pre>currentValue</code></strong> — текущий элемент массива.</li>
-<li>В каждой итерации результат накапливается и сохраняется в аккумулятор.</li>
-</ul>
-<p><strong>Пример без начального значения:</strong></p>
+<p><strong>Добавление элементов в массив:</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const numbers = [1, 2, 3, 4, 5];
-
-// Пример без начального значения, тогда accumulator = 1, и начиная со второго элемента массива
-const sum = numbers.reduce(
-  (accumulator, currentValue) =&gt; accumulator + currentValue
-);
-
-console.log(sum); // 15</code></pre>
-</doc-codeblock></div>
-<p>В данном случае, если <code v-pre>initialValue</code> не указано, <code v-pre>reduce()</code> начинает работу с первого элемента массива как с начального значения, и второй элемент становится первым элементом для обработки в функции.</p>
-<p><strong>Нахождение максимального значения:</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const numbers = [1, 3, 5, 7, 2, 9];
-
-// Используем reduce для нахождения максимального значения
-const max = numbers.reduce((accumulator, currentValue) =&gt; {
-  return currentValue &gt; accumulator ? currentValue : accumulator;
-}, 0);
-
-console.log(max); // 9</code></pre>
-</doc-codeblock></div>
-<p>Здесь аккумулятор содержит максимальное значение, которое обновляется, если текущий элемент больше, чем текущее максимальное значение.</p>
-<p><strong>Подсчет количества вхождений элементов:</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;banana&quot;, &quot;apple&quot;];
-
-const count = fruits.reduce((accumulator, fruit) =&gt; {
-  if (accumulator[fruit]) {
-    accumulator[fruit] += 1;
-  } else {
-    accumulator[fruit] = 1;
-  }
-  return accumulator;
-}, {});
-
-console.log(count);
-// Вывод: { apple: 3, banana: 2, orange: 1 }</code></pre>
-</doc-codeblock></div>
-<p><strong>Объединение объектов в один:</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const users = [
-  { name: &quot;John&quot;, age: 30 },
-  { name: &quot;Jane&quot;, age: 25 },
-  { name: &quot;Jack&quot;, age: 40 },
-];
-
-const combined = users.reduce((accumulator, user) =&gt; {
-  return { ...accumulator, [user.name]: user.age };
-}, {});
-
-console.log(combined);
-// Вывод: { John: 30, Jane: 25, Jack: 40 }</code></pre>
-</doc-codeblock></div>
-<p><strong>Плоское преобразование массива массивов (флэттенинг):</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const nestedArrays = [
-  [1, 2],
-  [3, 4],
-  [5, 6],
-];
-
-const flatArray = nestedArrays.reduce((accumulator, currentArray) =&gt; {
-  return accumulator.concat(currentArray);
-}, []);
-
-console.log(flatArray); // [1, 2, 3, 4, 5, 6]</code></pre>
-</doc-codeblock></div>
-<p><strong>Группировка элементов массива по какому-то критерию:</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const people = [
-  { name: &quot;Alice&quot;, age: 21 },
-  { name: &quot;Bob&quot;, age: 25 },
-  { name: &quot;Charlie&quot;, age: 21 },
-  { name: &quot;David&quot;, age: 25 },
-];
-
-const groupedByAge = people.reduce((accumulator, person) =&gt; {
-  const age = person.age;
-  if (!accumulator[age]) {
-    accumulator[age] = [];
-  }
-  accumulator[age].push(person.name);
-  return accumulator;
-}, {});
-
-console.log(groupedByAge);
-// Вывод: { '21': ['Alice', 'Charlie'], '25': ['Bob', 'David'] }</code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">const colors = [&quot;красный&quot;, &quot;зеленый&quot;, &quot;синий&quot;];
+colors.splice(1, 0, &quot;оранжевый&quot;, &quot;желтый&quot;);
+console.log(colors); // ['красный', 'оранжевый', 'желтый', 'зеленый', 'синий']</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="заключение">
     <h4>
@@ -388,7 +296,7 @@ console.log(groupedByAge);
         <span>Заключение</span>
     </h4>
 </doc-anchor-target>
-<p>Метод <code v-pre>reduce()</code> — мощный инструмент для трансформации массивов и вычисления сложных итоговых значений. Он гибок и может быть использован для решения различных задач, таких как суммирование, группировка, слияние данных, подсчет вхождений и многое другое. Однако его использование требует понимания того, как <code v-pre>accumulator</code> обновляется на каждом шаге, и умения правильно работать с функцией обратного вызова.</p>
+<p>Метод <code v-pre>splice()</code> позволяет вносить изменения в массив, делая его гибким и удобным для работы с данными.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -398,20 +306,20 @@ console.log(groupedByAge);
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/p/padstart/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/s/sort/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Pad​Start</span>
+                                                <span class="block mt-1">Sort</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/r/repeat/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/s/split/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Repeat</span>
+                                                <span class="block mt-1">Split</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -455,6 +363,6 @@ console.log(groupedByAge);
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Reduce", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Splice", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
