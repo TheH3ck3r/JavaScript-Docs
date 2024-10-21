@@ -10,34 +10,34 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Фишки | JavaScript: Docs</title>
-    <meta name="title" content="Фишки | JavaScript: Docs">
-    <meta name="description" content="Здесь используется:">
+    <title>Create | JavaScript: Docs</title>
+    <meta name="title" content="Create | JavaScript: Docs">
+    <meta name="description" content="В JavaScript метод create() используется для создания нового объекта с указанным прототипом и, при необходимости, с дополнительными свойствами.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/фишки/">
+    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/c/create/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/фишки/">
-    <meta property="og:title" content="Фишки | JavaScript: Docs">
-    <meta property="og:description" content="Здесь используется:">
+    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/c/create/">
+    <meta property="og:title" content="Create | JavaScript: Docs">
+    <meta property="og:description" content="В JavaScript метод create() используется для создания нового объекта с указанным прототипом и, при необходимости, с дополнительными свойствами.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/фишки/">
-    <meta property="twitter:title" content="Фишки | JavaScript: Docs">
-    <meta property="twitter:description" content="Здесь используется:">
+    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/c/create/">
+    <meta property="twitter:title" content="Create | JavaScript: Docs">
+    <meta property="twitter:description" content="В JavaScript метод create() используется для создания нового объекта с указанным прототипом и, при необходимости, с дополнительными свойствами.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../uploads/javascript.svg" rel="icon">
-    <link href="../resources/css/retype.css?v=3.6.0.782823514220" rel="stylesheet">
+    <link href="../../../uploads/javascript.svg" rel="icon">
+    <link href="../../../resources/css/retype.css?v=3.6.0.782823514220" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.782823514220" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.782823514220" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.6.0.782823514220" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.782823514220" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.782823514220" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.782823514220" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -52,10 +52,10 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../../../" class="flex items-center leading-snug text-2xl">
                             <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../uploads/javascript.svg">
-                                <img class="max-h-10 hidden dark:inline-block" src="../uploads/javascript.svg">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../../uploads/javascript.svg">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../../uploads/javascript.svg">
                             </span>
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">JavaScript</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
@@ -244,102 +244,62 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="фишки" class="break-words">
+<doc-anchor-target id="create" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#фишки">#</doc-anchor-trigger>
-        <span>Фишки</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#create">#</doc-anchor-trigger>
+        <span>Create</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="избавление-от-повторяющихся-элементов-в-массиве">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#избавление-от-повторяющихся-элементов-в-массиве">#</doc-anchor-trigger>
-        <span>Избавление от повторяющихся элементов в массиве</span>
-    </h3>
-</doc-anchor-target>
-<p><strong>Здесь используется:</strong></p>
-<ol>
-<li>Link; Метод spread (TODO)</li>
-<li>Link; Встроенный объект Set (TODO)</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">// Вариант 1
-let arr = [1, 2, 3, 4, 1, 2, 3, 1, 2, 1];
-arr = [...new Set(arr)];
-
-// Вариант 2
-let arr = [1, 2, 3, 4, 1, 2, 3, 1, 2, 1];
-arr = Array.from(new Set(arr));
-
-// Выведет [ 1, 2, 3, 4 ]</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="нахождение-количества-цифр-в-числе-за-о1">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#нахождение-количества-цифр-в-числе-за-о1">#</doc-anchor-trigger>
-        <span>Нахождение количества цифр в числе за О(1)</span>
-    </h3>
-</doc-anchor-target>
-<p><strong>Здесь используется:</strong></p>
-<ol>
-<li>Link; Встроенный объект Math (TODO)</li>
-</ol>
-<doc-anchor-target id="пояснение">
+<p>В JavaScript метод <code v-pre>create()</code> используется для создания нового объекта с указанным прототипом и, при необходимости, с дополнительными свойствами. Этот метод предоставляет более гибкий способ создания объектов с заданными прототипами, чем конструктор объекта.</p>
+<p>Синтаксис: <code v-pre>Object.create(proto, [propertiesObject])</code></p>
+<ul>
+<li><code v-pre>proto</code>: Объект, который будет использован в качестве прототипа для нового объекта.</li>
+<li><code v-pre>propertiesObject</code> (необязательный): Объект, содержащий определения свойств для нового объекта. Каждое свойство определяется как пара &quot;ключ-значение&quot;.</li>
+</ul>
+<doc-anchor-target id="пример-использования-create">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#пояснение">#</doc-anchor-trigger>
-        <span>Пояснение:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-create">#</doc-anchor-trigger>
+        <span>Пример использования <code v-pre>create()</code>:</span>
     </h4>
 </doc-anchor-target>
-<p>Этот код использует функции из стандартного объекта <code v-pre>Math</code>, чтобы определить количество цифр в числе number.</p>
-<ul>
-<li><p><code v-pre>Math.log10(number)</code>: Эта функция возвращает десятичный логарифм числа <code v-pre>number</code>. Например, если <code v-pre>number</code> равно <code v-pre>100</code>, то <code v-pre>Math.log10(100)</code> будет равно <code v-pre>2</code>, так как <strong>10 в степени 2 равно 100</strong>.</p>
-</li>
-<li><p><code v-pre>Math.round(Math.log10(number) + 1)</code>: Здесь мы берем десятичный логарифм числа <code v-pre>number</code>, увеличиваем его на <code v-pre>1</code> (чтобы учесть саму цифру в числе), и округляем результат до ближайшего целого числа с помощью <code v-pre>Math.round()</code>. Это дает нам количество цифр в числе <code v-pre>number</code>.</p>
-</li>
-</ul>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">let number = 192837465;
-let NumberOfDigits = Math.round(Math.log10(number) + 1);
+<pre class="language-javascript"><code v-pre class="language-javascript">// Создание объекта с прототипом
+const myObject = Object.create({ x: 10, y: 20 });
 
-// Выведет 9</code></pre>
+// Доступ к свойствам прототипа
+console.log(myObject.x); // Вывод: 10
+console.log(myObject.y); // Вывод: 20
+
+// Добавление свойства к созданному объекту
+myObject.z = 30;
+console.log(myObject.z); // Вывод: 30</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="подсчет-вхождения-каждого-элемента-в-строке">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#подсчет-вхождения-каждого-элемента-в-строке">#</doc-anchor-trigger>
-        <span>Подсчет вхождения каждого элемента в строке</span>
-    </h3>
-</doc-anchor-target>
-<p><strong>Здесь используется:</strong></p>
-<ol>
-<li>Link; Метод spread (TODO)</li>
-<li>Link; Метод reduce (TODO)</li>
-</ol>
-<doc-anchor-target id="пояснение-1">
+<p>В этом примере <code v-pre>myObject</code> создан с прототипом, содержащим свойства <code v-pre>x</code> и <code v-pre>y</code>. При обращении к свойствам <code v-pre>x</code> и <code v-pre>y</code>, они будут взяты из прототипа. Свойство <code v-pre>z</code> добавлено к самому объекту.</p>
+<doc-anchor-target id="пример-использования-с-propertiesobject">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#пояснение-1">#</doc-anchor-trigger>
-        <span>Пояснение:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-с-propertiesobject">#</doc-anchor-trigger>
+        <span>Пример использования с <code v-pre>propertiesObject</code>:</span>
     </h4>
 </doc-anchor-target>
-<p>Этот код использует метод массивов <code v-pre>reduce()</code> для анализа строки <code v-pre>str</code> и подсчета частоты встречаемости каждого символа в этой строке.</p>
-<ul>
-<li><p><code v-pre>[...str]</code>: Это преобразует строку <code v-pre>str</code> в массив, разбивая ее на отдельные символы. Например, если <code v-pre>str</code> равно <code v-pre>&quot;hello&quot;</code>, то <code v-pre>[...str]</code> будет равно <code v-pre>[&quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]</code>.</p>
-</li>
-<li><p><code v-pre>.reduce((result, symbol) =&gt; ((result[symbol] = (result[symbol] || 0) + 1), result), {})</code>: Этот метод <code v-pre>reduce()</code> проходит по каждому элементу массива (в данном случае, по каждому символу строки).</p>
-</li>
-</ul>
-<p>Функция обратного вызова, переданная в <code v-pre>reduce()</code>, выполняется для каждого элемента массива. В данном случае, она выполняется для каждого символа строки.</p>
-<ul>
-<li><code v-pre>result[symbol] = (result[symbol] || 0) + 1</code>: Здесь проверяется, есть ли уже запись для текущего символа symbol в объекте <code v-pre>result</code>. Если она уже существует, увеличивается значение счетчика для этого символа на <code v-pre>1</code>. Если она не существует (т.е. <code v-pre>result[symbol]</code> равен <code v-pre>undefined</code>), тогда значение счетчика устанавливается в <code v-pre>1</code>.</li>
-</ul>
-<p>В итоге, в объекте <code v-pre>result</code> будут содержаться частоты встречаемости каждого символа в строке.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const str = &quot;abcd\nabc\nad\na&quot;;
-
-let NumberOfSymbols = [...str].reduce(
-  (result, symbol) =&gt; ((result[symbol] = (result[symbol] || 0) + 1), result),
-  {}
+<pre class="language-javascript"><code v-pre class="language-javascript">const myObject = Object.create(
+  { x: 10, y: 20 },
+  {
+    z: {
+      value: 30,
+      writable: true,
+      enumerable: true,
+      configurable: true,
+    },
+  }
 );
 
-// Выведет { a: 4, b: 2, c: 2, d: 2, '\n': 3 }</code></pre>
+console.log(myObject.x); // Вывод: 10
+console.log(myObject.y); // Вывод: 20
+console.log(myObject.z); // Вывод: 30</code></pre>
 </doc-codeblock></div>
+<p>В этом примере свойство <code v-pre>z</code> добавляется к объекту с использованием <code v-pre>propertiesObject</code>, которое содержит дополнительные параметры свойства, такие как <code v-pre>writable</code>, <code v-pre>enumerable</code>, и <code v-pre>configurable</code>.</p>
+<p><code v-pre>create()</code> полезен, когда вы хотите создать объект с определенным прототипом, не вызывая конструктор этого объекта. Это также может быть полезно в случаях, когда вы хотите создать объект, который наследует свойства из другого объекта, но не обладает своими собственными свойствами конструктора.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -349,16 +309,23 @@ let NumberOfSymbols = [...str].reduce(
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../объекты/prototype/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/c/concat/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Prototype</span>
+                                                <span class="block mt-1">Concat</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/e/entries/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Entries</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -399,6 +366,6 @@ let NumberOfSymbols = [...str].reduce(
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Фишки", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Create", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
