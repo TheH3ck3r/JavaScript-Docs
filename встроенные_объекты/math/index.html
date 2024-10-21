@@ -4,40 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/javascript-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.782823514220">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.782826589572">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Prototype | JavaScript: Docs</title>
-    <meta name="title" content="Prototype | JavaScript: Docs">
-    <meta name="description" content="В JavaScript каждый объект имеет свойство prototype, которое является ссылкой на другой объект, называемый прототипом.">
+    <title>Math | JavaScript: Docs</title>
+    <meta name="title" content="Math | JavaScript: Docs">
+    <meta name="description" content="Объект Math в JavaScript представляет собой встроенный объект, который предоставляет математические функции и константы для выполнения различных...">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/объекты/prototype/">
+    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/встроенные_объекты/math/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/объекты/prototype/">
-    <meta property="og:title" content="Prototype | JavaScript: Docs">
-    <meta property="og:description" content="В JavaScript каждый объект имеет свойство prototype, которое является ссылкой на другой объект, называемый прототипом.">
+    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/встроенные_объекты/math/">
+    <meta property="og:title" content="Math | JavaScript: Docs">
+    <meta property="og:description" content="Объект Math в JavaScript представляет собой встроенный объект, который предоставляет математические функции и константы для выполнения различных...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/объекты/prototype/">
-    <meta property="twitter:title" content="Prototype | JavaScript: Docs">
-    <meta property="twitter:description" content="В JavaScript каждый объект имеет свойство prototype, которое является ссылкой на другой объект, называемый прототипом.">
+    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/встроенные_объекты/math/">
+    <meta property="twitter:title" content="Math | JavaScript: Docs">
+    <meta property="twitter:description" content="Объект Math в JavaScript представляет собой встроенный объект, который предоставляет математические функции и константы для выполнения различных...">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../uploads/javascript.svg" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.782823514220" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.782826589572" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.782823514220" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.782826589572" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.782823514220" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.782823514220" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.782826589572" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.782826589572" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -244,57 +244,108 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="prototype" class="break-words">
+<doc-anchor-target id="math" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#prototype">#</doc-anchor-trigger>
-        <span>Prototype</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#math">#</doc-anchor-trigger>
+        <span>Math</span>
     </h1>
 </doc-anchor-target>
-<p>В JavaScript каждый объект имеет свойство <code v-pre>prototype</code>, которое является ссылкой на другой объект, называемый прототипом. Прототип объекта используется для наследования свойств и методов от этого прототипа.</p>
-<p>Когда вы обращаетесь к свойству или методу объекта, JavaScript сначала ищет это свойство или метод непосредственно в самом объекте. Если свойство или метод не найдены, JavaScript будет искать их в прототипе объекта. Если свойство или метод также не найдены в прототипе, поиск будет продолжаться по цепочке прототипов до тех пор, пока либо не будет найдено нужное свойство или метод, либо не будет достигнут глобальный объект <code v-pre>Object.prototype</code>.</p>
-<p><code v-pre>prototype</code> - это свойство функции, которое указывает на прототип объекта, созданного этой функцией через оператор new. Когда функция вызывается с оператором new, создается новый объект, и prototype этой функции становится прототипом такого нового объекта. При этом каждый новый объект наследует свойства и методы прототипа функции.</p>
-<doc-anchor-target id="вот-как-это-работает">
+<p>Объект <code v-pre>Math</code> в JavaScript представляет собой встроенный объект, который предоставляет математические функции и константы для выполнения различных математических операций.</p>
+<p>Вот некоторые из наиболее часто используемых свойств и методов объекта <code v-pre>Math</code>:</p>
+<p><strong>Математические константы:</strong></p>
+<ol>
+<li><code v-pre>Math.PI</code>: Возвращает число <code v-pre>π</code> (пи), приближенное до 15 знаков после запятой.</li>
+</ol>
+<p><strong>Математические методы:</strong></p>
+<ol>
+<li><code v-pre>Math.abs(x)</code>: Возвращает абсолютное значение числа <code v-pre>x</code>.</li>
+<li><code v-pre>Math.sqrt(x)</code>: Возвращает квадратный корень числа <code v-pre>x</code>.</li>
+<li><code v-pre>Math.pow(x, y)</code>: Возводит число <code v-pre>x</code> в степень <code v-pre>y</code>.</li>
+<li><code v-pre>Math.min(x1, x2, ..., xn)</code>: Возвращает наименьшее из переданных чисел.</li>
+<li><code v-pre>Math.max(x1, x2, ..., xn)</code>: Возвращает наибольшее из переданных чисел.</li>
+<li><code v-pre>Math.random()</code>: Возвращает случайное число между 0 (включительно) и 1 (исключительно).</li>
+<li><code v-pre>Math.round(x)</code>: Округляет число <code v-pre>x</code> до ближайшего целого.</li>
+<li><code v-pre>Math.floor(x)</code>: Округляет число <code v-pre>x</code> в меньшую сторону до ближайшего целого.</li>
+<li><code v-pre>Math.ceil(x)</code>: Округляет число <code v-pre>x</code> в большую сторону до ближайшего целого.</li>
+<li><code v-pre>Math.sin(x)</code>, <code v-pre>Math.cos(x)</code>, <code v-pre>Math.tan(x)</code>: Возвращают синус, косинус и тангенс угла <code v-pre>x</code> в радианах.</li>
+<li><code v-pre>Math.log(x)</code>, <code v-pre>Math.exp(x)</code>: Возвращают натуральный логарифм и экспоненту числа <code v-pre>x</code>.</li>
+<li><code v-pre>Math.abs(x)</code>: Возвращает абсолютное значение числа <code v-pre>x</code>.</li>
+<li><code v-pre>Math.sign(x)</code>: Возвращает знак числа <code v-pre>x</code> (+1, -1 или 0).</li>
+<li><code v-pre>Math.trunc(x)</code>: Удаляет десятичную часть числа <code v-pre>x</code>.</li>
+<li><code v-pre>Math.atan2(y, x)</code>: Возвращает угол между положительным направлением оси <code v-pre>x</code> и точкой с координатами <code v-pre>(x, y)</code>.</li>
+</ol>
+<doc-anchor-target id="пример-использования-math">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#вот-как-это-работает">#</doc-anchor-trigger>
-        <span>Вот как это работает:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-math">#</doc-anchor-trigger>
+        <span>Пример использования <code v-pre>Math</code>:</span>
     </h4>
 </doc-anchor-target>
-<p><strong>Создание функции-конструктора:</strong> Вы создаете функцию, которая будет использоваться для создания объектов определенного типа. Например:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">  function Person(name, age) {
-    this.name = name;
-    this.age = age;</code></pre>
-</doc-codeblock></div>
-<p><strong>Использование <code v-pre>.prototype</code>:</strong></p>
-<p>Вы добавляете методы и свойства к объекту <code v-pre>.prototype</code> функции-конструктора. Например:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">Person.prototype.sayHello = function () {
-  console.log(`Привет, меня зовут ${this.name} и мне ${this.age} лет.`);
-};</code></pre>
-</doc-codeblock></div>
-<p>Этот метод будет доступен для всех объектов, созданных с использованием <code v-pre>Person</code>, так как все они будут наследовать <code v-pre>.prototype</code>.</p>
-<p><strong>Создание объектов:</strong> Теперь вы можете создавать объекты с помощью вашей функции-конструктора:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const person1 = new Person(&quot;Анна&quot;, 30);
-const person2 = new Person(&quot;Иван&quot;, 25);</code></pre>
-</doc-codeblock></div>
-<p><strong>Использование унаследованных методов:</strong> Вы можете вызывать методы, определенные в <code v-pre>.prototype</code>, на созданных объектах:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">person1.sayHello(); // Выводит: Привет, меня зовут Анна и мне 30 лет.
-person2.sayHello(); // Выводит: Привет, меня зовут Иван и мне 25 лет.</code></pre>
-</doc-codeblock></div>
-<p><code v-pre>.prototype</code> позволяет сэкономить память, так как методы и свойства не дублируются для каждого объекта, а только ссылку на <code v-pre>.prototype</code>. Это также позволяет добавлять новые методы и свойства к существующим объектам этого типа, и эти изменения будут отражены во всех объектах этого типа.</p>
-<p>Запись <code v-pre>.prototype</code> используется в старом синтаксисе для создания классов и наследования в JavaScript.</p>
-<p>Таким же образом, с помощью <code v-pre>.prototype</code> вы можете создавать методы для структур данных (т-к они тоже объекты). Например:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">Array.prototype.last = function () {
-  return this.length ? this.at(-1) : -1;
-};
+<pre class="language-javascript"><code v-pre class="language-javascript">// 1. Math.abs(x): Возвращает абсолютное значение числа x.
+let negativeNumber = -42;
+console.log(&quot;Math.abs:&quot;, Math.abs(negativeNumber)); // 42
 
-const arr = [1, 2, 3];
-console.log(arr.last()); // Выводит: 3</code></pre>
+// 2. Math.sqrt(x): Возвращает квадратный корень числа x.
+let number = 16;
+console.log(&quot;Math.sqrt:&quot;, Math.sqrt(number)); // 4
+
+// 3. Math.pow(x, y): Возводит число x в степень y.
+let base = 2;
+let exponent = 3;
+console.log(&quot;Math.pow:&quot;, Math.pow(base, exponent)); // 8
+
+// 4. Math.min(x1, x2, ..., xn): Возвращает наименьшее из переданных чисел.
+console.log(&quot;Math.min:&quot;, Math.min(10, 3, -5, 20)); // -5
+
+// 5. Math.max(x1, x2, ..., xn): Возвращает наибольшее из переданных чисел.
+console.log(&quot;Math.max:&quot;, Math.max(10, 3, -5, 20)); // 20
+
+// 6. Math.random(): Возвращает случайное число между 0 и 1.
+console.log(&quot;Math.random:&quot;, Math.random()); // Например, 0.532
+
+// 7. Math.round(x): Округляет число x до ближайшего целого.
+let decimalNumber = 4.7;
+console.log(&quot;Math.round:&quot;, Math.round(decimalNumber)); // 5
+
+// 8. Math.floor(x): Округляет число x в меньшую сторону.
+console.log(&quot;Math.floor:&quot;, Math.floor(decimalNumber)); // 4
+
+// 9. Math.ceil(x): Округляет число x в большую сторону.
+console.log(&quot;Math.ceil:&quot;, Math.ceil(decimalNumber)); // 5
+
+// 10. Math.sin(x), Math.cos(x), Math.tan(x): Возвращают синус, косинус и тангенс угла x (в радианах).
+let angle = Math.PI / 4; // 45 градусов
+console.log(&quot;Math.sin:&quot;, Math.sin(angle)); // 0.7071...
+console.log(&quot;Math.cos:&quot;, Math.cos(angle)); // 0.7071...
+console.log(&quot;Math.tan:&quot;, Math.tan(angle)); // 1
+
+// 11. Math.log(x): Возвращает натуральный логарифм числа x.
+let logNumber = 10;
+console.log(&quot;Math.log:&quot;, Math.log(logNumber)); // ~2.302
+
+// 12. Math.exp(x): Возвращает экспоненту числа x.
+console.log(&quot;Math.exp:&quot;, Math.exp(2)); // ~7.389
+
+// 13. Math.sign(x): Возвращает знак числа x (+1, -1 или 0).
+console.log(&quot;Math.sign:&quot;, Math.sign(-100)); // -1
+
+// 14. Math.trunc(x): Удаляет десятичную часть числа.
+let floatNumber = 4.934;
+console.log(&quot;Math.trunc:&quot;, Math.trunc(floatNumber)); // 4
+
+// 15. Math.atan2(y, x): Возвращает угол в радианах между положительным направлением оси x и точкой (x, y).
+let y = 1;
+let x = 1;
+console.log(&quot;Math.atan2:&quot;, Math.atan2(y, x)); // ~0.785 (это π/4 радиан, или 45 градусов)</code></pre>
 </doc-codeblock></div>
-<p>P.S: В современном JavaScript есть более удобные способы создания классов и наследования с использованием ключевых слов <code v-pre>class</code>, <code v-pre>extends</code> и <code v-pre>super</code>.</p>
+<p>Объект <code v-pre>Math</code> не имеет конструктора и не может быть инстанциирован. Все его методы и свойства вызываются непосредственно от объекта <code v-pre>Math</code>. Например, <code v-pre>Math.PI</code>, <code v-pre>Math.abs(-5)</code>, и так далее.</p>
+<doc-anchor-target id="заключение">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#заключение">#</doc-anchor-trigger>
+        <span>Заключение</span>
+    </h4>
+</doc-anchor-target>
+<p>Эти методы и свойства делают объект <code v-pre>Math</code> важным инструментом для выполнения различных математических операций в JavaScript.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -304,20 +355,20 @@ console.log(arr.last()); // Выводит: 3</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../объекты/math/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Math</span>
+                                                <span class="block mt-1">Главная</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../фишки/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../встроенные_объекты/prototype/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Фишки</span>
+                                                <span class="block mt-1">Prototype</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -361,6 +412,6 @@ console.log(arr.last()); // Выводит: 3</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Prototype", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Math", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

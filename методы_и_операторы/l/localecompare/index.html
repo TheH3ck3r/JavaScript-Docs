@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/javascript-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.782823514220">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.782826589572">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -32,12 +32,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../uploads/javascript.svg" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.782823514220" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.782826589572" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.782823514220" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.782826589572" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.782823514220" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.782823514220" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.782826589572" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.782826589572" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -285,7 +285,13 @@ console.log(result); // Меньше нуля: -1, 'apple' меньше чем '
 const result2 = str1.localeCompare(str2, undefined, { sensitivity: &quot;base&quot; });
 console.log(result2); // Ноль: 0, с учетом регистра 'apple' === 'banana'</code></pre>
 </doc-codeblock></div>
-<p>Важно отметить, что <code v-pre>localeCompare()</code> полезен, когда вам нужно сравнивать строки с учетом локальных правил сортировки, чтобы обеспечить правильное упорядочивание для разных языков и регионов.</p>
+<doc-anchor-target id="заключение">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#заключение">#</doc-anchor-trigger>
+        <span>Заключение</span>
+    </h4>
+</doc-anchor-target>
+<p><code v-pre>localeCompare()</code> полезен, когда вам нужно сравнивать строки с учетом локальных правил сортировки, чтобы обеспечить правильное упорядочивание для разных языков и регионов.</p>
 <p>Хорошо работает вместe с методом <code v-pre>sort()</code>.</p>
 
                                 

@@ -10,34 +10,34 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Bind | JavaScript: Docs</title>
-    <meta name="title" content="Bind | JavaScript: Docs">
-    <meta name="description" content="bind в JavaScript — это метод, который используется для привязки контекста (значения this) и, возможно, аргументов функции.">
+    <title>RegExp | JavaScript: Docs</title>
+    <meta name="title" content="RegExp | JavaScript: Docs">
+    <meta name="description" content="TODO: Добавить ссылки на методы">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/b/bind/">
+    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/встроенные_объекты/regexp/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/b/bind/">
-    <meta property="og:title" content="Bind | JavaScript: Docs">
-    <meta property="og:description" content="bind в JavaScript — это метод, который используется для привязки контекста (значения this) и, возможно, аргументов функции.">
+    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/встроенные_объекты/regexp/">
+    <meta property="og:title" content="RegExp | JavaScript: Docs">
+    <meta property="og:description" content="TODO: Добавить ссылки на методы">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/b/bind/">
-    <meta property="twitter:title" content="Bind | JavaScript: Docs">
-    <meta property="twitter:description" content="bind в JavaScript — это метод, который используется для привязки контекста (значения this) и, возможно, аргументов функции.">
+    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/встроенные_объекты/regexp/">
+    <meta property="twitter:title" content="RegExp | JavaScript: Docs">
+    <meta property="twitter:description" content="TODO: Добавить ссылки на методы">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../uploads/javascript.svg" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.782826589572" rel="stylesheet">
+    <link href="../../uploads/javascript.svg" rel="icon">
+    <link href="../../resources/css/retype.css?v=3.6.0.782826589572" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.782826589572" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.782826589572" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.782826589572" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.782826589572" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.782826589572" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.782826589572" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -52,10 +52,10 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../../../" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
                             <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../../../uploads/javascript.svg">
-                                <img class="max-h-10 hidden dark:inline-block" src="../../../uploads/javascript.svg">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../uploads/javascript.svg">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../uploads/javascript.svg">
                             </span>
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">JavaScript</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
@@ -244,63 +244,195 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="bind" class="break-words">
+<doc-anchor-target id="regexp" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#bind">#</doc-anchor-trigger>
-        <span>Bind</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#regexp">#</doc-anchor-trigger>
+        <span>RegExp</span>
     </h1>
 </doc-anchor-target>
-<p><code v-pre>bind</code> в JavaScript — это метод, который используется для привязки контекста (значения <code v-pre>this</code>) и, возможно, аргументов функции. Он не вызывает функцию сразу, а создает новую функцию, которая, при вызове, будет иметь указанный контекст и аргументы. Это полезно, например, когда нужно передать функцию как обработчик события или сохранить функцию с определенным контекстом для последующего вызова.</p>
-<p>Синтаксис: <code v-pre>const boundFunction = someFunction.bind(thisArg, arg1, arg2, ...);</code></p>
-<ul>
-<li><code v-pre>someFunction</code>: Функция, контекст и аргументы которой мы хотим привязать.</li>
-<li><code v-pre>thisArg</code>: Объект, который будет использоваться в качестве значения this при вызове функции.</li>
-<li><code v-pre>arg1, arg2, ...</code>: Аргументы, которые будут частично привязаны к функции.</li>
-</ul>
-<doc-anchor-target id="пример-использования-bind">
+<p><strong>TODO: Добавить ссылки на методы</strong></p>
+<p>Регулярные выражения (Regular Expressions) в JavaScript - это мощный инструмент в JavaScript, позволяющий выполнять сложные операции поиска и замены в строках.</p>
+<p>В JavaScript, регулярные выражения представлены объектом <code v-pre>RegExp</code>, и они могут быть использованы для выполнения разнообразных операций на строках.</p>
+<doc-anchor-target id="основные-аспекты-работы-с-regexp">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-bind">#</doc-anchor-trigger>
-        <span>Пример использования <code v-pre>bind</code>:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#основные-аспекты-работы-с-regexp">#</doc-anchor-trigger>
+        <span>Основные аспекты работы с <code v-pre>RegExp</code>:</span>
     </h4>
 </doc-anchor-target>
+<p><strong>Создание регулярного выражения:</strong></p>
+<p>Литерал регулярного выражения: <code v-pre>/pattern/flags</code>, где <code v-pre>pattern</code> - это сам шаблон, а <code v-pre>flags</code> - флаги:</p>
+<p><strong>Флаги:</strong></p>
+<ul>
+<li><code v-pre>g</code> - Глобальный поиск:
+<ul>
+<li>Этот флаг указывает, что поиск должен осуществляться для всех соответствий в строке, а не только для первого. Если этот флаг не установлен, поиск будет остановлен после первого соответствия.</li>
+<li>Пример: <code v-pre>/pattern/g</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><code v-pre>i</code> - Игнорирование регистра:
+<ul>
+<li>Флаг <code v-pre>i</code> указывает, что поиск должен быть регистро-независимым. Это значит, что символы верхнего и нижнего регистра будут считаться одинаковыми.</li>
+<li>Пример: <code v-pre>/pattern/i</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><code v-pre>m</code> - Многострочный режим:
+<ul>
+<li>Флаг <code v-pre>m</code> позволяет проводить поиск по множеству строк. Это означает, что <code v-pre>^</code> и <code v-pre>$</code> будут соответствовать началу и концу каждой строки, а не только всей строке.</li>
+<li>Пример: <code v-pre>/pattern/m</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><code v-pre>u</code> - Юникодный режим:
+<ul>
+<li>Флаг <code v-pre>u</code> включает полную поддержку Юникода, позволяя работать с символами Юникода в регулярных выражениях.
+Пример: <code v-pre>/pattern/u</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><code v-pre>s</code> - Режим однострочного символа <code v-pre>.</code>:
+<ul>
+<li>Флаг <code v-pre>s</code> делает символ <code v-pre>.</code> соответствующим любому символу, включая символ новой строки (<code v-pre>\n</code>).</li>
+<li>Пример: <code v-pre>/pattern/s</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><code v-pre>y</code> - Строгий режим сопоставления:
+<ul>
+<li>Флаг <code v-pre>y</code> указывает, что сопоставление должно начинаться с позиции последнего сопоставления. Этот флаг полезен при выполнении многократных сопоставлений в одной и той же строке.</li>
+<li>Пример: <code v-pre>/pattern/y</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><code v-pre>d</code> - Режим цифрового сопоставления:
+<ul>
+<li>Флаг <code v-pre>d</code> позволяет использовать расширенный синтаксис для цифр в регулярных выражениях.</li>
+<li>Пример: <code v-pre>/pattern/d</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><code v-pre>x</code> - Режим игнорирования пробелов:
+<ul>
+<li>Флаг x позволяет добавлять пробелы и комментарии в регулярное выражение, что делает его более читаемым.</li>
+<li>Пример: <code v-pre>/pattern/x</code></li>
+</ul>
+</li>
+</ul>
+<p>Эти флаги могут комбинироваться для достижения желаемого поведения регулярного выражения в JavaScript. Например, регулярное выражение с флагами <code v-pre>/pattern/gi</code> будет искать все глобальные совпадения, игнорируя регистр.</p>
+<p><strong>Использование конструктора: <code v-pre>new RegExp(&quot;pattern&quot;, &quot;flags&quot;)</code>.</strong></p>
+<ul>
+<li>Простой поиск:
+<ul>
+<li>Метод <code v-pre>test()</code> проверяет, есть ли соответствие шаблону в строке и возвращает true или false.</li>
+<li>Метод <code v-pre>exec()</code> выполняет поиск и возвращает информацию о первом соответствии, если оно найдено.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Поиск и замена:
+<ul>
+<li>Метод <code v-pre>match()</code> на строке выполняет поиск соответствий шаблону и возвращает массив с результатами.</li>
+<li>Метод <code v-pre>replace()</code> позволяет заменить соответствия шаблону на другую строку.</li>
+<li>Методы <code v-pre>split()</code> и <code v-pre>search()</code> также могут использовать регулярные выражения для разделения строк и поиска позиции соответствия.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Специальные символы: В регулярных выражениях есть специальные символы, такие как:
+<ul>
+<li><code v-pre>.</code> - соответствует любому символу</li>
+<li><code v-pre>+</code> - 1 или более повторений</li>
+<li><code v-pre>?</code> - 0 или 1 повторение</li>
+<li><code v-pre>[]</code> - набор символов</li>
+<li><code v-pre>|</code> - логическое &quot;или&quot; и др.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Группировка и обратные ссылки:
+<ul>
+<li>Скобки <code v-pre>()</code> позволяют группировать части шаблона.</li>
+<li>Обратные ссылки, такие как <code v-pre>\1</code>, могут использоваться для ссылки на результаты из групп.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="примеры-использования-regexp">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#примеры-использования-regexp">#</doc-anchor-trigger>
+        <span>Примеры использования <code v-pre>RegExp</code>:</span>
+    </h4>
+</doc-anchor-target>
+<p><strong>Поиск электронной почты:</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const obj = {
-  x: 42,
-  getX: function () {
-    return this.x;
-  },
-};
+<pre class="language-javascript"><code v-pre class="language-javascript">const emailPattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+const email = &quot;example@mail.com&quot;;
 
-const unboundGetX = obj.getX;
-console.log(unboundGetX()); // undefined, потому что контекст не привязан
-
-const boundGetX = obj.getX.bind(obj);
-console.log(boundGetX()); // 42, контекст теперь привязан к объекту</code></pre>
+console.log(emailPattern.test(email)); // true</code></pre>
 </doc-codeblock></div>
-<p>В этом примере, когда <code v-pre>getX</code> вызывается через <code v-pre>unboundGetX</code>, значение <code v-pre>this</code> внутри функции теряется, и результатом будет <code v-pre>undefined</code>. Когда <code v-pre>getX</code> вызывается через <code v-pre>boundGetX</code>, используя <code v-pre>bind</code>, контекст привязывается к объекту <code v-pre>obj</code>, и результатом становится <code v-pre>42</code>.</p>
-<p>Применение <code v-pre>bind</code> также часто используется для создания функций с <strong>предопределенными аргументами</strong>:</p>
-<p><strong>Пример 1</strong></p>
+<p><strong>Поиск даты:</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">function multiply(x, y) {
-  return x * y;
-}
+<pre class="language-javascript"><code v-pre class="language-javascript">const datePattern = /(\d{2})\.(\d{2})\.(\d{4})/;
+const date = &quot;20.10.2023&quot;;
 
-const multiplyByTwo = multiply.bind(null, 2); // Привязываем 2 к первому аргументу
-console.log(multiplyByTwo(5)); // Результат: 2 * 5 = 10</code></pre>
+const match = date.match(datePattern);
+console.log(match); // ['20.10.2023', '20', '10', '2023']</code></pre>
 </doc-codeblock></div>
-<p><strong>Пример 2</strong></p>
+<p><strong>Удаление лишних пробелов:</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">function exampleFunction(arg1, arg2, arg3) {
-  console.log(arg1, arg2, arg3);
-}
+<pre class="language-javascript"><code v-pre class="language-javascript">const str = &quot;This   is   a    test  string.&quot;;
+const newStr = str.replace(/\s+/g, &quot; &quot;);
 
-const boundFunction = exampleFunction.bind(null, null, &quot;L&quot;);
-
-boundFunction(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;);
-// Вывод: null L A</code></pre>
+console.log(newStr); // 'This is a test string.'</code></pre>
 </doc-codeblock></div>
-<p>В этом примере два аргумента первоначально привязаны к <code v-pre>null</code>, а третий равен <code v-pre>'L'</code>, и при вызове <code v-pre>boundFunction</code> с аргументами <code v-pre>'A'</code>, <code v-pre>'B'</code> и <code v-pre>'C'</code>, вывод будет <code v-pre>null L A</code>.</p>
-<p><code v-pre>bind</code> не изменяет оригинальную функцию, а создает новую функцию с привязанным контекстом и аргументами. Это полезно в сценариях, где нужно сохранить определенный контекст для вызова функции позже.</p>
+<p><strong>Валидация пароля:</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const passwordPattern =
+  /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&amp;])[A-Za-z\d@$!%*?&amp;]{8,}$/;
+const password = &quot;Abc12345!&quot;;
+
+console.log(passwordPattern.test(password)); // true</code></pre>
+</doc-codeblock></div>
+<p><strong>Удаление HTML-тегов:</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const htmlString = &quot;&lt;p&gt;This is a &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;&quot;;
+const strippedString = htmlString.replace(/&lt;[^&gt;]+&gt;/g, &quot;&quot;);
+
+console.log(strippedString); // 'This is a bold text.'</code></pre>
+</doc-codeblock></div>
+<p><strong>Подсчет числа слов в строке:</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const str = &quot;Hello, this is a test string!&quot;;
+const wordCount = (str.match(/\b\w+\b/g) || []).length;
+
+console.log(wordCount); // 6</code></pre>
+</doc-codeblock></div>
+<!-- - Методы для работы с регулярными выражениями: - `test()`, `exec()`, `match()`, `replace()`, `split()`, `search()`.
+  Регулярные выражения могут быть сложными, но они предоставляют мощный инструмент для манипуляции текстом в JavaScript. При работе с ними важно уделять внимание синтаксису и флагам, а также использовать их с осторожностью, чтобы избегать проблем с производительностью. -->
+<doc-anchor-target id="заключение">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#заключение">#</doc-anchor-trigger>
+        <span>Заключение</span>
+    </h4>
+</doc-anchor-target>
+<p><code v-pre>RegExp</code> используются для сопоставления текста с шаблоном и могут быть полезны для валидации данных, поиска и замены подстрок, парсинга и других текстовых манипуляций.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -310,20 +442,20 @@ boundFunction(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;);
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/a/apply/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../встроенные_объекты/prototype/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Apply</span>
+                                                <span class="block mt-1">Prototype</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/c/call/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../методы_и_операторы/a/apply/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Call</span>
+                                                <span class="block mt-1">Apply</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -367,6 +499,6 @@ boundFunction(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;);
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Bind", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "RegExp", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
