@@ -10,24 +10,24 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Map | JavaScript: Docs</title>
-    <meta name="title" content="Map | JavaScript: Docs">
-    <meta name="description" content="Метод map() в JavaScript представляет собой встроенную функцию для массивов, которая применяет заданную функцию к каждому элементу массива и создает...">
+    <title>Test | JavaScript: Docs</title>
+    <meta name="title" content="Test | JavaScript: Docs">
+    <meta name="description" content="Метод test используется для проверки, соответствует ли заданная строка регулярному выражению.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/m/map/">
+    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/t/test/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/m/map/">
-    <meta property="og:title" content="Map | JavaScript: Docs">
-    <meta property="og:description" content="Метод map() в JavaScript представляет собой встроенную функцию для массивов, которая применяет заданную функцию к каждому элементу массива и создает...">
+    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/t/test/">
+    <meta property="og:title" content="Test | JavaScript: Docs">
+    <meta property="og:description" content="Метод test используется для проверки, соответствует ли заданная строка регулярному выражению.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/m/map/">
-    <meta property="twitter:title" content="Map | JavaScript: Docs">
-    <meta property="twitter:description" content="Метод map() в JavaScript представляет собой встроенную функцию для массивов, которая применяет заданную функцию к каждому элементу массива и создает...">
+    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/t/test/">
+    <meta property="twitter:title" content="Test | JavaScript: Docs">
+    <meta property="twitter:description" content="Метод test используется для проверки, соответствует ли заданная строка регулярному выражению.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -244,76 +244,51 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="map" class="break-words">
+<doc-anchor-target id="test" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#map">#</doc-anchor-trigger>
-        <span>Map</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#test">#</doc-anchor-trigger>
+        <span>Test</span>
     </h1>
 </doc-anchor-target>
-<p>Метод <code v-pre>map()</code> в JavaScript представляет собой встроенную функцию для массивов, которая применяет заданную функцию к каждому элементу массива и создает новый массив на основе результатов вызовов этой функции. Оригинальный массив остается неизменным.</p>
-<p>Синтаксис: <code v-pre>const newArray = array.map((currentValue, index, array) =&gt; { Логика })</code></p>
+<p>Метод <code v-pre>test</code> используется для проверки, соответствует ли заданная строка регулярному выражению.</p>
+<p>Синтаксис: <code v-pre>regexp.test(string)</code></p>
 <ul>
-<li><code v-pre>array</code>: Исходный массив, над которым применяется метод map().</li>
-<li><code v-pre>currentValue</code>: Текущий обрабатываемый элемент массива.</li>
-<li><code v-pre>index</code>: Индекс текущего элемента.</li>
-<li><code v-pre>array</code>: Ссылка на исходный массив.</li>
+<li><code v-pre>regexp</code>: Это объект <code v-pre>RegExp</code>, который представляет регулярное выражение.</li>
+<li><code v-pre>string</code>: Это строка, которую вы хотите проверить на соответствие регулярному выражению.</li>
 </ul>
-<doc-anchor-target id="основное">
+<doc-anchor-target id="возвращаемое-значение">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#основное">#</doc-anchor-trigger>
-        <span>Основное</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#возвращаемое-значение">#</doc-anchor-trigger>
+        <span>Возвращаемое значение:</span>
     </h4>
 </doc-anchor-target>
-<ul>
-<li><code v-pre>map()</code> проходит по каждому элементу исходного массива, вызывая переданную функцию для каждого элемента.</li>
-<li>Возвращаемое значение функции становится элементом нового массива, который будет создан <code v-pre>map()</code>.</li>
-<li>Результирующий массив имеет ту же длину, что и исходный.</li>
-<li>Исходный массив остается неизменным.</li>
-</ul>
-<doc-anchor-target id="пример-использования-map">
+<p><code v-pre>test</code> возвращает <code v-pre>true</code>, если строка соответствует регулярному выражению, и <code v-pre>false</code>, если нет.</p>
+<doc-anchor-target id="пример-использования-test">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-map">#</doc-anchor-trigger>
-        <span>Пример использования <code v-pre>map()</code></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-test">#</doc-anchor-trigger>
+        <span>Пример использования <code v-pre>test</code>:</span>
     </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const numbers = [1, 2, 3, 4, 5];
+<pre class="language-javascript"><code v-pre class="language-javascript">const pattern = /apple/i; // Регулярное выражение для поиска 'apple' (без учета регистра)
 
-const doubledNumbers = numbers.map((num) =&gt; {
-  return num * 2;
-});
+const text1 = &quot;Я люблю яблоки&quot;;
+const text2 = &quot;Груши вкуснее, чем яблоки&quot;;
 
-console.log(doubledNumbers); // Вывод: [2, 4, 6, 8, 10]</code></pre>
+const result1 = pattern.test(text1);
+const result2 = pattern.test(text2);
+
+console.log(result1); // true, так как 'яблоки' найдены в тексте 1
+console.log(result2); // true, так как 'яблоки' найдены в тексте 2</code></pre>
 </doc-codeblock></div>
-<p>В приведенном примере для каждого элемента массива <code v-pre>numbers</code> мы умножаем его на 2 с помощью функции, переданной методу <code v-pre>map()</code>. Результаты этих операций сохраняются в новом массиве <code v-pre>doubledNumbers</code>.</p>
-<doc-anchor-target id="использование-map-для-преобразования-объектов">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#использование-map-для-преобразования-объектов">#</doc-anchor-trigger>
-        <span>Использование map для преобразования объектов</span>
-    </h4>
-</doc-anchor-target>
-<p><code v-pre>map()</code> также может использоваться для преобразования массива объектов, возвращая новый массив с определенными свойствами объектов:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const users = [
-  { name: &quot;Alice&quot;, age: 30 },
-  { name: &quot;Bob&quot;, age: 25 },
-  { name: &quot;Eve&quot;, age: 35 },
-];
-
-const names = users.map((user) =&gt; {
-  return user.name;
-});
-
-console.log(names); // Вывод: ['Alice', 'Bob', 'Eve']</code></pre>
-</doc-codeblock></div>
-<p>В примере мы создаем новый массив, содержащий имена пользователей из массива объектов <code v-pre>users</code> с помощью <code v-pre>map()</code>.</p>
+<p>Здесь мы создали регулярное выражение <code v-pre>pattern</code>, которое ищет строку <code v-pre>'apple'</code> без учета регистра (<code v-pre>i</code>). Затем мы используем метод <code v-pre>test</code> для проверки двух разных текстовых строк на соответствие этому шаблону.</p>
 <doc-anchor-target id="заключение">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#заключение">#</doc-anchor-trigger>
         <span>Заключение</span>
     </h4>
 </doc-anchor-target>
-<p><code v-pre>map()</code> - мощный инструмент для преобразования данных в массивах, часто используется для обработки элементов и создания новых массивов на основе существующих данных.</p>
+<p><code v-pre>test</code> полезен, когда вам нужно быстро узнать, соответствует ли строка определенному шаблону, и это часто используется при обработке и фильтрации текстовых данных.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -323,20 +298,20 @@ console.log(names); // Вывод: ['Alice', 'Bob', 'Eve']</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/l/localecompare/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/s/spread/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Locale​Compare</span>
+                                                <span class="block mt-1">Spread</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/m/match/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/t/tostring/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Match</span>
+                                                <span class="block mt-1">To​String</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -380,6 +355,6 @@ console.log(names); // Вывод: ['Alice', 'Bob', 'Eve']</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Map", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Test", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
