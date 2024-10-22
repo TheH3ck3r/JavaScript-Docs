@@ -10,24 +10,24 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>TypeOf | JavaScript: Docs</title>
-    <meta name="title" content="TypeOf | JavaScript: Docs">
-    <meta name="description" content="Оператор typeof в JavaScript используется для определения типа значения (переменной, выражения или объекта).">
+    <title>ReduceRight | JavaScript: Docs</title>
+    <meta name="title" content="ReduceRight | JavaScript: Docs">
+    <meta name="description" content="Метод reduceRight() работает аналогично методу , но имеет одно ключевое отличие — он обрабатывает элементы массива с конца к началу, в то время как...">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/t/typeof/">
+    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/r/reduceright/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/t/typeof/">
-    <meta property="og:title" content="TypeOf | JavaScript: Docs">
-    <meta property="og:description" content="Оператор typeof в JavaScript используется для определения типа значения (переменной, выражения или объекта).">
+    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/r/reduceright/">
+    <meta property="og:title" content="ReduceRight | JavaScript: Docs">
+    <meta property="og:description" content="Метод reduceRight() работает аналогично методу , но имеет одно ключевое отличие — он обрабатывает элементы массива с конца к началу, в то время как...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/t/typeof/">
-    <meta property="twitter:title" content="TypeOf | JavaScript: Docs">
-    <meta property="twitter:description" content="Оператор typeof в JavaScript используется для определения типа значения (переменной, выражения или объекта).">
+    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/r/reduceright/">
+    <meta property="twitter:title" content="ReduceRight | JavaScript: Docs">
+    <meta property="twitter:description" content="Метод reduceRight() работает аналогично методу , но имеет одно ключевое отличие — он обрабатывает элементы массива с конца к началу, в то время как...">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -244,69 +244,71 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="typeof" class="break-words">
+<doc-anchor-target id="reduceright" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#typeof">#</doc-anchor-trigger>
-        <span>TypeOf</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#reduceright">#</doc-anchor-trigger>
+        <span>ReduceRight</span>
     </h1>
 </doc-anchor-target>
-<p>Оператор <code v-pre>typeof</code> в JavaScript используется для определения типа значения (переменной, выражения или объекта). Этот оператор возвращает строку, указывающую тип данных операнда.</p>
-<p>Синтаксис: <code v-pre>typeof operand</code></p>
+<p>Метод <code v-pre>reduceRight()</code> работает аналогично методу <a href="../reduce/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white dark:text-dark-850 bg-gray-900 dark:bg-white hover:bg-gray-600 dark:hover:bg-dark-300 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+    <span>reduce</span>
+</a>, но имеет одно ключевое отличие — он обрабатывает элементы массива с конца к началу, в то время как метод <code v-pre>reduce()</code> работает с начала к концу. Это полезно в ситуациях, когда нужно аккумулировать значения, начиная с последнего элемента массива.</p>
+<p>Синтаксис: <code v-pre>array.reduceRight(callback(accumulator, currentValue, currentIndex, array), initialValue</code></p>
 <ul>
-<li><code v-pre>operand</code> - это выражение или переменная, чей тип данных вы хотите определить.</li>
+<li><code v-pre>callback</code> — функция, которая выполняется для каждого элемента массива. Эта функция принимает следующие аргументы:
+<ul>
+<li><code v-pre>accumulator</code> — аккумулятор, который накапливает результат. Он и будет тем итоговым значением, которое вернет <code v-pre>reduceRight()</code>.</li>
+<li><code v-pre>currentValue</code> — текущий элемент массива, который обрабатывается на данном шаге.</li>
+<li><code v-pre>currentIndex</code> (необязательный) — индекс текущего элемента (начиная с <code v-pre>0</code> или с <code v-pre>1</code>, если передан <code v-pre>initialValue</code>).</li>
+<li><code v-pre>array</code> (необязательный) — исходный массив, к которому применяется <code v-pre>reduceRight()</code>.</li>
 </ul>
-<doc-anchor-target id="примеры-использования-typeof">
+</li>
+<li><code v-pre>initialValue</code> (необязательный) — начальное значение аккумулятора. Если не указано, то <code v-pre>accumulator</code> принимает значение первого элемента массива, а перебор начинается со второго элемента.</li>
+</ul>
+<doc-anchor-target id="пример-использования">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#примеры-использования-typeof">#</doc-anchor-trigger>
-        <span>Примеры использования <code v-pre>typeof</code>:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования">#</doc-anchor-trigger>
+        <span>Пример использования</span>
     </h4>
 </doc-anchor-target>
+<p><strong>Развёртывания массива:</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">let x = 10;
-let y = &quot;Hello&quot;;
-let z = true;
-let w = { name: &quot;John&quot;, age: 30 };
+<pre class="language-javascript"><code v-pre class="language-javascript">const nestedArr = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
 
-console.log(typeof x); // Вывод: &quot;number&quot;
-console.log(typeof y); // Вывод: &quot;string&quot;
-console.log(typeof z); // Вывод: &quot;boolean&quot;
-console.log(typeof w); // Вывод: &quot;object&quot;</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="возвращаемое-значение">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#возвращаемое-значение">#</doc-anchor-trigger>
-        <span>Возвращаемое значение:</span>
-    </h4>
-</doc-anchor-target>
-<ol>
-<li><code v-pre>&quot;undefined&quot;</code>: если переменная не была присвоена значению или если значение переменной равно <code v-pre>undefined</code>.</li>
-<li><code v-pre>&quot;number&quot;</code>: для числовых значений.</li>
-<li><code v-pre>&quot;string&quot;</code>: для строковых значений.</li>
-<li><code v-pre>&quot;boolean&quot;</code>: для логических значений <code v-pre>true</code> или <code v-pre>false</code>.</li>
-<li><code v-pre>&quot;object&quot;</code>: для объектов, массивов и <code v-pre>null</code>. Обратите внимание, что <code v-pre>typeof null</code> возвращает <code v-pre>&quot;object&quot;</code>, это историческая особенность JavaScript, а не ошибка.</li>
-<li><code v-pre>&quot;function&quot;</code>: для функций.</li>
-<li><code v-pre>&quot;symbol&quot;</code>: для символов (введенных в ECMAScript 6).</li>
-</ol>
-<p><strong>Пример использования с <code v-pre>undefined</code>:</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">let a;
-console.log(typeof a); // Вывод: &quot;undefined&quot;</code></pre>
-</doc-codeblock></div>
-<p><strong>Пример использования с <code v-pre>function</code>:</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">function myFunction() {
-  return 42;
-}
+const flatArr = nestedArr.reduceRight((acc, val) =&gt; acc.concat(val), []);
 
-console.log(typeof myFunction); // Вывод: &quot;function&quot;</code></pre>
+console.log(flatArr); // [4, 5, 2, 3, 0, 1]</code></pre>
 </doc-codeblock></div>
+<p>Здесь <code v-pre>reduceRight()</code> разворачивает массив с конца, так что последний вложенный массив <code v-pre>[4, 5]</code> оказывается в начале результирующего массива.</p>
+<p><strong>Развёртывание массива строк и преобразование в строку:</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const operations = [&quot;+&quot;, &quot;3&quot;, &quot;*&quot;, &quot;5&quot;, &quot;-&quot;, &quot;2&quot;];
+
+const expression = operations.reduceRight((acc, val) =&gt; acc + val);
+
+console.log(expression); // '2-5*3+'</code></pre>
+</doc-codeblock></div>
+<p>Здесь выражение создается в обратном порядке, начиная с конца массива, что может быть полезно в некоторых случаях, связанных с порядком операций.</p>
+<p><strong>Композиция функций:</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const compose = (functions) =&gt; (x) =&gt;
+  functions.reduceRight((acc, fn) =&gt; fn(acc), x);
+
+const fn = compose([(x) =&gt; x + 3, (x) =&gt; x + 1, (x) =&gt; 2 * x]);
+console.log(fn(4)); // 12</code></pre>
+</doc-codeblock></div>
+<p><strong>Композиция функций</strong> — это процесс последовательного применения нескольких функций к одному значению (<code v-pre>[f(x), g(x), h(x)]</code> равна <code v-pre>fn(x) = f(g(h(x)))</code>). В данном случае, мы создаем функцию <code v-pre>compose()</code>, которая принимает массив функций и использует метод <code v-pre>reduceRight()</code> для их последовательного применения с конца к началу.</p>
 <doc-anchor-target id="заключение">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#заключение">#</doc-anchor-trigger>
         <span>Заключение</span>
     </h4>
 </doc-anchor-target>
-<p>Оператор <code v-pre>typeof</code> полезен, когда вам нужно выполнить различные действия в зависимости от типа переменной или значения. Он также используется для обработки ошибок и проверки наличия переменных перед их использованием.</p>
+<p>Метод <code v-pre>reduceRight()</code> полезен в ситуациях, где важен обратный порядок обработки данных, например, при работе с вложенными структурами, построении выражений или манипуляциях с данными, где исходный порядок элементов имеет значение.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -316,20 +318,20 @@ console.log(typeof myFunction); // Вывод: &quot;function&quot;</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/t/tostring/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/r/reduce/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">To​String</span>
+                                                <span class="block mt-1">Reduce</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/v/values/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/r/repeat/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Values</span>
+                                                <span class="block mt-1">Repeat</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -373,6 +375,6 @@ console.log(typeof myFunction); // Вывод: &quot;function&quot;</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "TypeOf", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "ReduceRight", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
