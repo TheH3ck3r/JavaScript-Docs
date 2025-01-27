@@ -10,24 +10,24 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Create | JavaScript: Docs</title>
-    <meta name="title" content="Create | JavaScript: Docs">
-    <meta name="description" content="В JavaScript метод create() используется для создания нового объекта с указанным прототипом и, при необходимости, с дополнительными свойствами.">
+    <title>ToSorted | JavaScript: Docs</title>
+    <meta name="title" content="ToSorted | JavaScript: Docs">
+    <meta name="description" content="Метод toSorted()— это современный метод для сортировки массива, введенный в спецификации ECMAScript. В отличие от метода ">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/c/create/">
+    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/t/tosorted/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/c/create/">
-    <meta property="og:title" content="Create | JavaScript: Docs">
-    <meta property="og:description" content="В JavaScript метод create() используется для создания нового объекта с указанным прототипом и, при необходимости, с дополнительными свойствами.">
+    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/t/tosorted/">
+    <meta property="og:title" content="ToSorted | JavaScript: Docs">
+    <meta property="og:description" content="Метод toSorted()— это современный метод для сортировки массива, введенный в спецификации ECMAScript. В отличие от метода ">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/c/create/">
-    <meta property="twitter:title" content="Create | JavaScript: Docs">
-    <meta property="twitter:description" content="В JavaScript метод create() используется для создания нового объекта с указанным прототипом и, при необходимости, с дополнительными свойствами.">
+    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/t/tosorted/">
+    <meta property="twitter:title" content="ToSorted | JavaScript: Docs">
+    <meta property="twitter:description" content="Метод toSorted()— это современный метод для сортировки массива, введенный в спецификации ECMAScript. В отличие от метода ">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -244,68 +244,74 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="create" class="break-words">
+<doc-anchor-target id="tosorted" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#create">#</doc-anchor-trigger>
-        <span>Create</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tosorted">#</doc-anchor-trigger>
+        <span>ToSorted</span>
     </h1>
 </doc-anchor-target>
-<p>В JavaScript метод <code v-pre>create()</code> используется для создания нового объекта с указанным прототипом и, при необходимости, с дополнительными свойствами. Этот метод предоставляет более гибкий способ создания объектов с заданными прототипами, чем конструктор объекта.</p>
-<p>Синтаксис: <code v-pre>Object.create(proto, [propertiesObject])</code></p>
+<p>Метод <code v-pre>toSorted()</code> — это современный метод для сортировки массива, введенный в спецификации ECMAScript. В отличие от метода <a href="../../s/sort/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white dark:text-dark-850 bg-gray-900 dark:bg-white hover:bg-gray-600 dark:hover:bg-dark-300 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+    <span>sort</span>
+</a>, он не изменяет исходный массив, а возвращает новый массив с отсортированными элементами. Это делает его полезным для работы с данными, где требуется сохранить неизменным оригинальный массив.</p>
+<p>Синтаксис: <code v-pre>array.toSorted(compareFunction)</code></p>
 <ul>
-<li><code v-pre>proto</code>: Объект, который будет использован в качестве прототипа для нового объекта.</li>
-<li><code v-pre>propertiesObject</code> (необязательный): Объект, содержащий определения свойств для нового объекта. Каждое свойство определяется как пара &quot;ключ-значение&quot;.</li>
+<li><code v-pre>array</code>: Массив, который нужно отсортировать.</li>
+<li><code v-pre>compareFunction</code> (необязательный): Функция сравнения, определяющая порядок сортировки. Если не указана, элементы сортируются как строки в порядке Unicode.</li>
 </ul>
-<doc-anchor-target id="пример-использования-create">
+<doc-anchor-target id="отличие-от-sort">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-create">#</doc-anchor-trigger>
-        <span>Пример использования <code v-pre>create()</code>:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#отличие-от-sort">#</doc-anchor-trigger>
+        <span>Отличие от <code v-pre>sort()</code>:</span>
     </h4>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">// Создание объекта с прототипом
-const myObject = Object.create({ x: 10, y: 20 });
-
-// Доступ к свойствам прототипа
-console.log(myObject.x); // Вывод: 10
-console.log(myObject.y); // Вывод: 20
-
-// Добавление свойства к созданному объекту
-myObject.z = 30;
-console.log(myObject.z); // Вывод: 30</code></pre>
-</doc-codeblock></div>
-<p>В этом примере <code v-pre>myObject</code> создан с прототипом, содержащим свойства <code v-pre>x</code> и <code v-pre>y</code>. При обращении к свойствам <code v-pre>x</code> и <code v-pre>y</code>, они будут взяты из прототипа. Свойство <code v-pre>z</code> добавлено к самому объекту.</p>
-<doc-anchor-target id="пример-использования-с-propertiesobject">
+<ul>
+<li><code v-pre>sort()</code> изменяет исходный массив.</li>
+<li><code v-pre>toSorted()</code> возвращает новый массив, не затрагивая оригинал.</li>
+</ul>
+<p>В остальном <code v-pre>toSorted()</code> работает аналогично <code v-pre>sort()</code>.</p>
+<doc-anchor-target id="примеры-использования-tosorted">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-с-propertiesobject">#</doc-anchor-trigger>
-        <span>Пример использования с <code v-pre>propertiesObject</code>:</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#примеры-использования-tosorted">#</doc-anchor-trigger>
+        <span>Примеры использования <code v-pre>toSorted()</code>:</span>
     </h4>
 </doc-anchor-target>
+<p><strong>Сортировка чисел:</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const myObject = Object.create(
-  { x: 10, y: 20 },
-  {
-    z: {
-      value: 30,
-      writable: true,
-      enumerable: true,
-      configurable: true,
-    },
-  }
-);
+<pre class="language-javascript"><code v-pre class="language-javascript">const numbers = [3, 1, 4, 1, 5, 9];
+const sortedNumbers = numbers.toSorted((a, b) =&gt; a - b);
 
-console.log(myObject.x); // Вывод: 10
-console.log(myObject.y); // Вывод: 20
-console.log(myObject.z); // Вывод: 30</code></pre>
+console.log(sortedNumbers); // [1, 1, 3, 4, 5, 9]
+console.log(numbers); // [3, 1, 4, 1, 5, 9] (исходный массив не изменен)</code></pre>
 </doc-codeblock></div>
-<p>В этом примере свойство <code v-pre>z</code> добавляется к объекту с использованием <code v-pre>propertiesObject</code>, которое содержит дополнительные параметры свойства, такие как <code v-pre>writable</code>, <code v-pre>enumerable</code>, и <code v-pre>configurable</code>.</p>
+<p><strong>Сортировка строк:</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const fruits = [&quot;date&quot;, &quot;pear&quot;, &quot;cherry&quot;, &quot;apple&quot;];
+const sortedFruits = fruits.toSorted();
+
+console.log(sortedFruits); // ['apple', 'cherry', 'date', 'pear']
+console.log(fruits); // ['date', 'pear', 'cherry', 'apple'] (исходный массив не изменен)</code></pre>
+</doc-codeblock></div>
+<p><strong>Сортировка объектов:</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const items = [
+  { name: &quot;apple&quot;, price: 2 },
+  { name: &quot;banana&quot;, price: 1 },
+  { name: &quot;cherry&quot;, price: 3 },
+];
+const sortedItems = items.toSorted((a, b) =&gt; a.price - b.price);
+
+console.log(sortedItems);
+// [{name: 'banana', price: 1}, {name: 'apple', price: 2}, {name: 'cherry', price: 3}]
+console.log(items);
+// [{name: 'apple', price: 2}, {name: 'banana', price: 1}, {name: 'cherry', price: 3}]</code></pre>
+</doc-codeblock></div>
 <doc-anchor-target id="заключение">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#заключение">#</doc-anchor-trigger>
         <span>Заключение</span>
     </h4>
 </doc-anchor-target>
-<p><code v-pre>create()</code> полезен, когда вы хотите создать объект с определенным прототипом, не вызывая конструктор этого объекта. Это также может быть полезно в случаях, когда вы хотите создать объект, который наследует свойства из другого объекта, но не обладает своими собственными свойствами конструктора.</p>
+<p>Метод <code v-pre>toSorted()</code> предоставляет удобный способ сортировки массива без изменения исходного массива. Он особенно полезен в случаях, когда требуется сохранить исходные данные неизменными, например, при работе с состояниями в React или других библиотеках. В большинстве случаев он может заменить <code v-pre>sort()</code> там, где важна неизменяемость данных.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -315,20 +321,20 @@ console.log(myObject.z); // Вывод: 30</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/c/concat/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/t/test/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Concat</span>
+                                                <span class="block mt-1">Test</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/e/entries/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/t/tostring/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Entries</span>
+                                                <span class="block mt-1">To​String</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -372,6 +378,6 @@ console.log(myObject.z); // Вывод: 30</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Create", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "ToSorted", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
