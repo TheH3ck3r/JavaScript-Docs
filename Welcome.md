@@ -123,11 +123,29 @@ authors:
 
 `Symbol` – Уникальный и неизменяемый идентификатор
 
+---
+
 ### Ссылочные структуры данных (Reference Types)
 
 [!badge variant="contrast" text="Object"](Структуры_данных/Object.md) - Объект в JavaScript — это коллекция свойств, где каждое свойство имеет уникальный ключ (имя) и значение.
 
+[!badge variant="contrast" text="Array"](Структуры_данных/Array.md) - В разработке (Массив)
+
+[!badge variant="contrast" text="Map"](Структуры_данных/Map.md) - В разработке (Карта)
+
 [!badge variant="contrast" text="Set"](Структуры_данных/Set.md) - Это встроенный объект, представляющий собой коллекцию уникальных значений.
+
+[!badge variant="contrast" text="Queue"](Структуры_данных/Queue.md) - В разработке (Очередь)
+
+[!badge variant="contrast" text="Stack"](Структуры_данных/Stack.md) - В разработке (Стек)
+
+[!badge variant="contrast" text="LinkedList"](Структуры_данных/LinkedList.md) - В разработке (Связанный список)
+
+[!badge variant="contrast" text="Deque"](Структуры_данных/Deque.md) - В разработке (Дек)
+
+[!badge variant="contrast" text="Tree"](Структуры_данных/Tree.md) - В разработке (Дерево)
+
+[!badge variant="contrast" text="Graph"](Структуры_данных/Graph.md) - В разработке (Граф)
 
 ---
 
