@@ -10,34 +10,30 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Instanceof | JavaScript: Docs</title>
-    <meta name="title" content="Instanceof | JavaScript: Docs">
-    <meta name="description" content="Оператор instanceof в JavaScript используется для проверки, принадлежит ли объект определенному классу или является ли он экземпляром определенного...">
+    <title>Stack | JavaScript: Docs</title>
+    <meta name="title" content="Stack | JavaScript: Docs">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/i/instanceof/">
+    <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/структуры_данных/stack/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/i/instanceof/">
-    <meta property="og:title" content="Instanceof | JavaScript: Docs">
-    <meta property="og:description" content="Оператор instanceof в JavaScript используется для проверки, принадлежит ли объект определенному классу или является ли он экземпляром определенного...">
+    <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/структуры_данных/stack/">
+    <meta property="og:title" content="Stack | JavaScript: Docs">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/методы_и_операторы/i/instanceof/">
-    <meta property="twitter:title" content="Instanceof | JavaScript: Docs">
-    <meta property="twitter:description" content="Оператор instanceof в JavaScript используется для проверки, принадлежит ли объект определенному классу или является ли он экземпляром определенного...">
+    <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/структуры_данных/stack/">
+    <meta property="twitter:title" content="Stack | JavaScript: Docs">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../uploads/javascript.svg" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.791812457029" rel="stylesheet">
+    <link href="../../uploads/javascript.svg" rel="icon">
+    <link href="../../resources/css/retype.css?v=3.6.0.791812457029" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.791812457029" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.791812457029" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.791812457029" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.791812457029" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.791812457029" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -52,10 +48,10 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../../../" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
                             <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../../../uploads/javascript.svg">
-                                <img class="max-h-10 hidden dark:inline-block" src="../../../uploads/javascript.svg">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../uploads/javascript.svg">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../uploads/javascript.svg">
                             </span>
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">JavaScript</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
@@ -244,51 +240,18 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="instanceof" class="break-words">
+<doc-anchor-target id="stack" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#instanceof">#</doc-anchor-trigger>
-        <span>Instanceof</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#stack">#</doc-anchor-trigger>
+        <span>Stack</span>
     </h1>
 </doc-anchor-target>
-<p>Оператор <code v-pre>instanceof</code> в JavaScript используется для проверки, принадлежит ли объект определенному классу или является ли он экземпляром определенного типа. Также этот оператор позволяет определить, был ли объект создан с использованием конкретного конструктора.</p>
-<p>Синтаксис: <code v-pre>object instanceof constructor</code></p>
-<ul>
-<li><code v-pre>object</code>: Объект, который вы хотите проверить.</li>
-<li><code v-pre>constructor</code>: Функция, которая представляет класс или тип.</li>
-</ul>
-<doc-anchor-target id="пример-использования-instanceof">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#пример-использования-instanceof">#</doc-anchor-trigger>
-        <span>Пример использования <code v-pre>instanceof</code>:</span>
-    </h4>
+<doc-anchor-target id="в-разработке">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#в-разработке">#</doc-anchor-trigger>
+        <span>В разработке</span>
+    </h2>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">function Car(make, model) {
-  this.make = make;
-  this.model = model;
-}
-
-const myCar = new Car(&quot;Toyota&quot;, &quot;Camry&quot;);
-
-console.log(myCar instanceof Car); // Вывод: true
-console.log(myCar instanceof Object); // Вывод: true
-console.log(myCar instanceof Array); // Вывод: false</code></pre>
-</doc-codeblock></div>
-<p>В данном примере <code v-pre>myCar</code> является экземпляром объекта <code v-pre>Car</code>, поэтому <code v-pre>myCar instanceof Car</code> возвращает <code v-pre>true</code>. Он также является экземпляром объекта <code v-pre>Object</code>, так как все объекты в JavaScript являются экземплярами <code v-pre>Object</code>. Однако, <code v-pre>myCar instanceof Array</code> возвращает <code v-pre>false</code>, потому что <code v-pre>myCar</code> не является массивом.</p>
-<p>Когда вы используете <code v-pre>instanceof</code>, он проверяет цепочку прототипов объекта. Если объект является экземпляром класса (или конструктора), или его прототип является экземпляром этого класса, то оператор <code v-pre>instanceof</code> возвращает <code v-pre>true</code>, иначе - <code v-pre>false</code>.</p>
-<p><strong>Например:</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">function Animal() {}
-function Dog() {}
-
-Dog.prototype = new Animal();
-
-const myDog = new Dog();
-
-console.log(myDog instanceof Dog); // Вывод: true
-console.log(myDog instanceof Animal); // Вывод: true</code></pre>
-</doc-codeblock></div>
-<p>Здесь <code v-pre>myDog</code> является экземпляром <code v-pre>Dog</code>, но также является экземпляром <code v-pre>Animal</code>, так как <code v-pre>Dog.prototype</code> был установлен как экземпляр <code v-pre>Animal</code>.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -298,20 +261,20 @@ console.log(myDog instanceof Animal); // Вывод: true</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/i/indexof/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../структуры_данных/set/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Index​Of</span>
+                                                <span class="block mt-1">Set</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../методы_и_операторы/l/localecompare/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../структуры_данных/tree/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Locale​Compare</span>
+                                                <span class="block mt-1">Tree</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -355,6 +318,6 @@ console.log(myDog instanceof Animal); // Вывод: true</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Instanceof", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Stack", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
