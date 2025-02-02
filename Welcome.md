@@ -129,7 +129,7 @@ authors:
 
 [!badge variant="contrast" text="Object"](Структуры_данных/Object.md) - Объект в JavaScript — это коллекция свойств, где каждое свойство имеет уникальный ключ (имя) и значение.
 
-[!badge variant="contrast" text="Array"](Структуры_данных/Array.md) - В разработке (Массив)
+[!badge variant="contrast" text="Array"](Структуры_данных/Array.md) - Массив — это встроенная структура данных в JavaScript, представляющая собой упорядоченную коллекцию значений, которые могут быть любых типов.
 
 [!badge variant="contrast" text="Map"](Структуры_данных/Map.md) - В разработке (Карта)
 
