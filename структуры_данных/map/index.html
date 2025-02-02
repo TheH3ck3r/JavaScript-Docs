@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/javascript-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.791812457029">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.791829976154">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -12,6 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Map | JavaScript: Docs</title>
     <meta name="title" content="Map | JavaScript: Docs">
+    <meta name="description" content="Map— это структура данных в JavaScript, представляющая собой коллекцию пар ключ-значение, в которой ключи могут быть любого типа (включая объекты,...">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/структуры_данных/map/">
@@ -20,20 +21,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/структуры_данных/map/">
     <meta property="og:title" content="Map | JavaScript: Docs">
+    <meta property="og:description" content="Map— это структура данных в JavaScript, представляющая собой коллекцию пар ключ-значение, в которой ключи могут быть любого типа (включая объекты,...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/структуры_данных/map/">
     <meta property="twitter:title" content="Map | JavaScript: Docs">
+    <meta property="twitter:description" content="Map— это структура данных в JavaScript, представляющая собой коллекцию пар ключ-значение, в которой ключи могут быть любого типа (включая объекты,...">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../uploads/javascript.svg" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.791812457029" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.791829976154" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.791812457029" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.791829976154" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.791812457029" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.791829976154" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.791829976154" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -246,12 +250,137 @@
         <span>Map</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="в-разработке">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#в-разработке">#</doc-anchor-trigger>
-        <span>В разработке</span>
-    </h2>
+<p><code v-pre>Map</code> — это структура данных в JavaScript, представляющая собой коллекцию пар ключ-значение, в которой ключи могут быть любого типа (включая объекты, функции и примитивы). В отличие от обычных объектов <a href="../object/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white dark:text-dark-850 bg-gray-900 dark:bg-white hover:bg-gray-600 dark:hover:bg-dark-300 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+    <span>Object</span>
+</a>, в <code v-pre>Map</code> порядок вставки элементов сохраняется.</p>
+<doc-anchor-target id="создание-map">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#создание-map">#</doc-anchor-trigger>
+        <span>Создание <code v-pre>Map</code></span>
+    </h3>
 </doc-anchor-target>
+<p><strong>1. Создание пустого <code v-pre>Map</code></strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const map = new Map();
+
+console.log(map); // Map(0) {}</code></pre>
+</doc-codeblock></div>
+<p><strong>2. Создание <code v-pre>Map</code> с начальными значениями</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const map = new Map([
+  [&quot;name&quot;, &quot;Alice&quot;],
+  [&quot;age&quot;, 25],
+  [&quot;job&quot;, &quot;developer&quot;],
+]);
+
+console.log(map);
+// Map(3) { 'name' =&gt; 'Alice', 'age' =&gt; 25, 'job' =&gt; 'developer' }</code></pre>
+</doc-codeblock></div>
+<hr>
+<doc-anchor-target id="основные-методы-map">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#основные-методы-map">#</doc-anchor-trigger>
+        <span>Основные методы <code v-pre>Map</code></span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><code v-pre>set(key, value)</code>: Добавляет пару ключ-значение</li>
+<li><code v-pre>get(key)</code>: Возвращает значение по ключу</li>
+<li><code v-pre>has(key)</code>: Проверяет, есть ли ключ в <code v-pre>Map</code></li>
+<li><code v-pre>delete(key)</code>: Удаляет пару ключ-значение</li>
+<li><code v-pre>clear()</code>: Очищает всю коллекцию</li>
+<li><code v-pre>size</code>: Возвращает количество элементов</li>
+</ul>
+<doc-anchor-target id="примеры-работы-с-методами-map">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#примеры-работы-с-методами-map">#</doc-anchor-trigger>
+        <span>Примеры работы с методами <code v-pre>Map</code></span>
+    </h4>
+</doc-anchor-target>
+<p><strong>Добавление элементов (<code v-pre>set</code>)</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const map = new Map();
+map.set(&quot;name&quot;, &quot;Alice&quot;);
+map.set(&quot;age&quot;, 25);
+map.set(&quot;job&quot;, &quot;developer&quot;);
+
+console.log(map);
+// Map(3) { 'name' =&gt; 'Alice', 'age' =&gt; 25, 'job' =&gt; 'developer' }</code></pre>
+</doc-codeblock></div>
+<p><strong>Получение значения (<code v-pre>get</code>)</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">console.log(map.get(&quot;name&quot;)); // Alice
+console.log(map.get(&quot;age&quot;)); // 25
+console.log(map.get(&quot;job&quot;)); // developer
+console.log(map.get(&quot;salary&quot;)); // undefined</code></pre>
+</doc-codeblock></div>
+<p><strong>Проверка наличия ключа (<code v-pre>has</code>)</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">console.log(map.has(&quot;age&quot;)); // true
+console.log(map.has(&quot;salary&quot;)); // false</code></pre>
+</doc-codeblock></div>
+<p><strong>Удаление элемента (<code v-pre>delete</code>)</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">map.delete(&quot;age&quot;);
+
+console.log(map.has(&quot;age&quot;)); // false
+console.log(map.size); // 2</code></pre>
+</doc-codeblock></div>
+<p><strong>Очистка <code v-pre>Map</code> (<code v-pre>clear</code>)</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">map.clear();
+
+console.log(map.size); // 0</code></pre>
+</doc-codeblock></div>
+<hr>
+<doc-anchor-target id="особенности-map">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#особенности-map">#</doc-anchor-trigger>
+        <span>Особенности <code v-pre>Map</code></span>
+    </h3>
+</doc-anchor-target>
+<p><strong><code v-pre>Map</code> поддерживает любые типы ключей</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const map = new Map();
+
+const objKey = { id: 1 };
+const funcKey = function () {};
+const symbolKey = Symbol(&quot;key&quot;);
+
+map.set(objKey, &quot;Object Value&quot;);
+map.set(funcKey, &quot;Function Value&quot;);
+map.set(symbolKey, &quot;Symbol Value&quot;);
+
+console.log(map.get(objKey)); // Object Value
+console.log(map.get(funcKey)); // Function Value
+console.log(map.get(symbolKey)); // Symbol Value</code></pre>
+</doc-codeblock></div>
+<p><em>P.S: В <code v-pre>Object</code> ключи могут быть только строками или <code v-pre>Symbol</code>, а в <code v-pre>Map</code> — любым типом.</em></p>
+<p><strong><code v-pre>Map</code> сохраняет порядок вставки</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const map = new Map();
+map.set(3, &quot;three&quot;);
+map.set(1, &quot;one&quot;);
+map.set(2, &quot;two&quot;);
+
+console.log([...map]);
+// [[3, 'three'], [1, 'one'], [2, 'two']] (порядок сохраняется)</code></pre>
+</doc-codeblock></div>
+<p><strong>Сравнение ключей по значению</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const map = new Map();
+map.set(1, &quot;one&quot;);
+
+console.log(map.get(1)); // one
+console.log(map.get(&quot;1&quot;)); // undefined (разные типы)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="заключение">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#заключение">#</doc-anchor-trigger>
+        <span>Заключение</span>
+    </h4>
+</doc-anchor-target>
+<p><code v-pre>Map</code> — это мощная структура данных, позволяющая эффективно хранить пары ключ-значение. Она обладает преимуществами над <code v-pre>Object</code>, такими как поддержка любых типов ключей, сохранение порядка и высокая производительность при частых изменениях данных.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -318,6 +447,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Map", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Map", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

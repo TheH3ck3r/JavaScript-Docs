@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/javascript-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.791812457029">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.791829976154">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -12,6 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Array | JavaScript: Docs</title>
     <meta name="title" content="Array | JavaScript: Docs">
+    <meta name="description" content="Array(массив) — это встроенная структура данных в JavaScript, представляющая собой упорядоченную коллекцию значений, которые могут быть любых типов.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/структуры_данных/array/">
@@ -20,20 +21,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/структуры_данных/array/">
     <meta property="og:title" content="Array | JavaScript: Docs">
+    <meta property="og:description" content="Array(массив) — это встроенная структура данных в JavaScript, представляющая собой упорядоченную коллекцию значений, которые могут быть любых типов.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/структуры_данных/array/">
     <meta property="twitter:title" content="Array | JavaScript: Docs">
+    <meta property="twitter:description" content="Array(массив) — это встроенная структура данных в JavaScript, представляющая собой упорядоченную коллекцию значений, которые могут быть любых типов.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../uploads/javascript.svg" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.791812457029" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.791829976154" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.791812457029" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.791829976154" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.791812457029" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.791829976154" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.791829976154" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -246,12 +250,44 @@
         <span>Array</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="в-разработке">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#в-разработке">#</doc-anchor-trigger>
-        <span>В разработке</span>
-    </h2>
+<p><code v-pre>Array</code> (массив) — это встроенная структура данных в JavaScript, представляющая собой упорядоченную коллекцию значений, которые могут быть любых типов.</p>
+<doc-anchor-target id="создание-массива">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#создание-массива">#</doc-anchor-trigger>
+        <span>Создание массива</span>
+    </h4>
 </doc-anchor-target>
+<p>Массив можно создать несколькими способами:</p>
+<p><strong>1. Через литерал массива (предпочтительный способ)</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const numbers = [1, 2, 3, 4, 5];
+const mixed = [42, &quot;hello&quot;, true, { key: &quot;value&quot; }, [1, 2, 3]];
+console.log(numbers); // [1, 2, 3, 4, 5]
+console.log(mixed); // [42, &quot;hello&quot;, true, { key: &quot;value&quot; }, [1, 2, 3]]</code></pre>
+</doc-codeblock></div>
+<p><strong>2. Через конструктор Array</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const arr1 = new Array(5); // Создаст массив длины 5 с пустыми ячейками
+const arr2 = new Array(1, 2, 3, 4, 5); // Создаст массив [1, 2, 3, 4, 5]
+console.log(arr1); // [ &lt;5 empty slots&gt; ]
+console.log(arr2); // [1, 2, 3, 4, 5]</code></pre>
+</doc-codeblock></div>
+<p><strong>Методы и операции:</strong></p>
+<p>Основные методы:</p>
+<ul>
+<li><code v-pre>push(value)</code>: добавляет элемент в конец</li>
+<li><code v-pre>pop()</code>: удаляет последний элемент</li>
+<li><code v-pre>unshift(value)</code>: добавляет элемент в начало</li>
+<li><code v-pre>shift()</code>: удаляет первый элемент</li>
+</ul>
+<p>Все остальные методы описаны на главной странице в разделе <a href="../../">методы массивов</a></p>
+<doc-anchor-target id="заключение">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#заключение">#</doc-anchor-trigger>
+        <span>Заключение</span>
+    </h4>
+</doc-anchor-target>
+<p><code v-pre>Array</code> — это мощная структура данных в JavaScript, обеспечивающая удобное хранение и манипуляцию элементами.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -318,6 +354,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Array", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Array", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
