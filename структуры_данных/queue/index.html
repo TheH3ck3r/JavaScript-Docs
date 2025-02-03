@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/javascript-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.791829976154">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.791893690784">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -12,6 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Queue | JavaScript: Docs</title>
     <meta name="title" content="Queue | JavaScript: Docs">
+    <meta name="description" content="Очередь ( Queue) — это структура данных, которая работает по принципу FIFO( First In, First Out).">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/структуры_данных/queue/">
@@ -20,20 +21,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/структуры_данных/queue/">
     <meta property="og:title" content="Queue | JavaScript: Docs">
+    <meta property="og:description" content="Очередь ( Queue) — это структура данных, которая работает по принципу FIFO( First In, First Out).">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/структуры_данных/queue/">
     <meta property="twitter:title" content="Queue | JavaScript: Docs">
+    <meta property="twitter:description" content="Очередь ( Queue) — это структура данных, которая работает по принципу FIFO( First In, First Out).">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../uploads/javascript.svg" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.791829976154" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.791893690784" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.791829976154" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.791893690784" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.791829976154" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.791893690784" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.791893690784" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -246,12 +250,167 @@
         <span>Queue</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="в-разработке">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#в-разработке">#</doc-anchor-trigger>
-        <span>В разработке</span>
-    </h2>
+<p>Очередь (<code v-pre>Queue</code>) — это структура данных, которая работает по принципу <code v-pre>FIFO</code> (<code v-pre>First In, First Out</code>). Это означает, что первый элемент, который добавляется в очередь, будет первым извлечен.</p>
+<doc-anchor-target id="создание-queue">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#создание-queue">#</doc-anchor-trigger>
+        <span>Создание <code v-pre>Queue</code></span>
+    </h3>
 </doc-anchor-target>
+<doc-anchor-target id="реализация-очереди-с-помощью-класса-оптимизированная-версия">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#реализация-очереди-с-помощью-класса-оптимизированная-версия">#</doc-anchor-trigger>
+        <span>Реализация Очереди с помощью класса (оптимизированная версия)</span>
+    </h4>
+</doc-anchor-target>
+<p>Чтобы избежать сдвига элементов при удалении, можно использовать объект с двумя указателями (<code v-pre>head</code> и <code v-pre>tail</code>).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">class Queue {
+  constructor() {
+    this.items = {};
+    this.head = 0;
+    this.tail = 0;
+  }
+
+  enqueue(element) {
+    this.items[this.tail] = element;
+    this.tail++;
+  }
+
+  dequeue() {
+    if (this.isEmpty()) return undefined;
+
+    const item = this.items[this.head];
+    delete this.items[this.head];
+    this.head++;
+    return item;
+  }
+
+  peek() {
+    return this.isEmpty() ? undefined : this.items[this.head];
+  }
+
+  isEmpty() {
+    return this.head === this.tail;
+  }
+
+  size() {
+    return this.tail - this.head;
+  }
+
+  clear() {
+    this.items = {};
+    this.head = 0;
+    this.tail = 0;
+  }
+}</code></pre>
+</doc-codeblock></div>
+<hr>
+<doc-anchor-target id="основные-методы-queue">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#основные-методы-queue">#</doc-anchor-trigger>
+        <span>Основные методы <code v-pre>Queue</code></span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><code v-pre>enqueue(element)</code>: Добавляет элемент в конец очереди</li>
+<li><code v-pre>dequeue()</code>: Удаляет и возвращает первый элемент</li>
+<li><code v-pre>peek()</code>: Показывает первый элемент без удаления</li>
+<li><code v-pre>isEmpty()</code>: Проверяет, пуста ли очередь</li>
+<li><code v-pre>clear()</code>: Очищает всю очередь</li>
+<li><code v-pre>size()</code>: Возвращает количество элементов в очереди</li>
+</ul>
+<doc-anchor-target id="примеры-работы-с-методами-queue">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#примеры-работы-с-методами-queue">#</doc-anchor-trigger>
+        <span>Примеры работы с методами <code v-pre>Queue</code></span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const queue = new Queue();
+queue.enqueue(&quot;Alice&quot;);
+queue.enqueue(&quot;Bob&quot;);
+queue.enqueue(&quot;Charlie&quot;);
+
+console.log(queue.dequeue()); // Alice
+console.log(queue.peek()); // Bob
+console.log(queue.size()); // 2
+console.log(queue.isEmpty()); // false
+queue.clear();
+console.log(queue.isEmpty()); // true</code></pre>
+</doc-codeblock></div>
+<hr>
+<doc-anchor-target id="особенности-queue">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#особенности-queue">#</doc-anchor-trigger>
+        <span>Особенности <code v-pre>Queue</code></span>
+    </h3>
+</doc-anchor-target>
+<p><strong>1. Очередь работает по принципу <code v-pre>FIFO</code></strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const queue = new Queue();
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+
+console.log(queue.dequeue()); // 1
+console.log(queue.dequeue()); // 2
+console.log(queue.dequeue()); // 3</code></pre>
+</doc-codeblock></div>
+<p><em>Первый элемент, который зашел, выходит первым!</em></p>
+<p><strong>2. Очередь поддерживает ограничение по размеру (<code v-pre>Fixed Queue</code>)</strong></p>
+<p>Можно создать очередь с фиксированным размером, которая не позволяет добавлять элементы при переполнении.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">class FixedQueue {
+  constructor(limit) {
+    this.items = {};
+    this.head = 0;
+    this.tail = 0;
+    this.limit = limit;
+  }
+
+  enqueue(element) {
+    if (this.size() &gt;= this.limit) {
+      console.log(&quot;Очередь переполнена!&quot;);
+      return;
+    }
+    this.items[this.tail] = element;
+    this.tail++;
+  }
+
+  dequeue() {
+    if (this.isEmpty()) return undefined;
+
+    const item = this.items[this.head];
+    delete this.items[this.head];
+    this.head++;
+    return item;
+  }
+
+  size() {
+    return this.tail - this.head;
+  }
+
+  isEmpty() {
+    return this.head === this.tail;
+  }
+}
+
+// Пример использования
+const queue = new FixedQueue(2);
+queue.enqueue(&quot;Task 1&quot;);
+queue.enqueue(&quot;Task 2&quot;);
+queue.enqueue(&quot;Task 3&quot;); // Очередь переполнена!
+console.log(queue.dequeue()); // Task 1
+console.log(queue.dequeue()); // Task 2</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="заключение">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#заключение">#</doc-anchor-trigger>
+        <span>Заключение</span>
+    </h4>
+</doc-anchor-target>
+<p>Очередь (<code v-pre>Queue</code>) — это одна из ключевых структур данных, работающая по принципу <code v-pre>FIFO</code> (<code v-pre>First In, First Out</code>). Она широко используется в алгоритмах обработки данных, многозадачности и сетевых технологиях.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -318,6 +477,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Queue", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Queue", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

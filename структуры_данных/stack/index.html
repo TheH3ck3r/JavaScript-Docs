@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/javascript-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.791829976154">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.791893690784">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -12,6 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Stack | JavaScript: Docs</title>
     <meta name="title" content="Stack | JavaScript: Docs">
+    <meta name="description" content="Stack(стек) — это структура данных, работающая по принципу LIFO( Last In, First Out), что означает: последний добавленный элемент извлекается первым.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://theh3ck3r.github.io/javascript-docs/структуры_данных/stack/">
@@ -20,20 +21,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://theh3ck3r.github.io/javascript-docs/структуры_данных/stack/">
     <meta property="og:title" content="Stack | JavaScript: Docs">
+    <meta property="og:description" content="Stack(стек) — это структура данных, работающая по принципу LIFO( Last In, First Out), что означает: последний добавленный элемент извлекается первым.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://theh3ck3r.github.io/javascript-docs/структуры_данных/stack/">
     <meta property="twitter:title" content="Stack | JavaScript: Docs">
+    <meta property="twitter:description" content="Stack(стек) — это структура данных, работающая по принципу LIFO( Last In, First Out), что означает: последний добавленный элемент извлекается первым.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../uploads/javascript.svg" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.791829976154" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.791893690784" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.791829976154" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.791893690784" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.791829976154" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.791893690784" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.791893690784" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -246,12 +250,179 @@
         <span>Stack</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="в-разработке">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#в-разработке">#</doc-anchor-trigger>
-        <span>В разработке</span>
-    </h2>
+<p><code v-pre>Stack</code> (стек) — это структура данных, работающая по принципу <code v-pre>LIFO</code> (<code v-pre>Last In, First Out</code>), что означает: последний добавленный элемент извлекается первым.</p>
+<doc-anchor-target id="создание-stack">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#создание-stack">#</doc-anchor-trigger>
+        <span>Создание <code v-pre>Stack</code></span>
+    </h3>
 </doc-anchor-target>
+<doc-anchor-target id="реализация-стека-на-массиве">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#реализация-стека-на-массиве">#</doc-anchor-trigger>
+        <span>Реализация стека на массиве</span>
+    </h4>
+</doc-anchor-target>
+<p>В JavaScript массив <a href="../array/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white dark:text-dark-850 bg-gray-900 dark:bg-white hover:bg-gray-600 dark:hover:bg-dark-300 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+    <span>Array</span>
+</a> можно использовать для создания стека, так как у него есть встроенные методы <code v-pre>.push</code>() и <code v-pre>.pop()</code></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">class Stack {
+  constructor() {
+    this.items = [];
+  }
+
+  push(value) {
+    this.items.push(value);
+  }
+
+  pop() {
+    if (this.isEmpty()) {
+      return &quot;Стек пуст&quot;;
+    }
+    return this.items.pop();
+  }
+
+  peek() {
+    return this.isEmpty() ? &quot;Стек пуст&quot; : this.items[this.items.length - 1];
+  }
+
+  isEmpty() {
+    return this.items.length === 0;
+  }
+
+  size() {
+    return this.items.length;
+  }
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="реализация-стека-на-объекте">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#реализация-стека-на-объекте">#</doc-anchor-trigger>
+        <span>Реализация стека на объекте</span>
+    </h4>
+</doc-anchor-target>
+<p>Массивы в JavaScript могут быть менее эффективными для стека, так как <code v-pre>.pop()</code> может потребовать переиндексации элементов. Альтернативный вариант — использовать объект <a href="../object/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white dark:text-dark-850 bg-gray-900 dark:bg-white hover:bg-gray-600 dark:hover:bg-dark-300 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+    <span>Object</span>
+</a>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">class Stack {
+  constructor() {
+    this.items = {};
+    this.count = 0;
+  }
+
+  push(value) {
+    this.items[this.count] = value;
+    this.count++;
+  }
+
+  pop() {
+    if (this.isEmpty()) {
+      return &quot;Стек пуст&quot;;
+    }
+    this.count--;
+    const value = this.items[this.count];
+    delete this.items[this.count];
+    return value;
+  }
+
+  peek() {
+    return this.isEmpty() ? &quot;Стек пуст&quot; : this.items[this.count - 1];
+  }
+
+  isEmpty() {
+    return this.count === 0;
+  }
+
+  size() {
+    return this.count;
+  }
+}</code></pre>
+</doc-codeblock></div>
+<hr>
+<doc-anchor-target id="основные-методы-stack">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#основные-методы-stack">#</doc-anchor-trigger>
+        <span>Основные методы <code v-pre>Stack</code></span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><code v-pre>push(value)</code> — добавляет элемент в вершину стека.</li>
+<li><code v-pre>pop()</code> — удаляет и возвращает последний добавленный элемент.</li>
+<li><code v-pre>peek()</code> — возвращает верхний элемент без удаления.</li>
+<li><code v-pre>isEmpty()</code> — проверяет, пуст ли стек.</li>
+<li><code v-pre>size()</code> — возвращает количество элементов.</li>
+</ul>
+<doc-anchor-target id="примеры-работы-с-методами-stack">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#примеры-работы-с-методами-stack">#</doc-anchor-trigger>
+        <span>Примеры работы с методами <code v-pre>Stack</code></span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const stack = new Stack();
+stack.push(1);
+stack.push(2);
+stack.push(3);
+console.log(stack.pop()); // 3
+console.log(stack.peek()); // 2
+console.log(stack.size()); // 2
+console.log(stack.isEmpty()); // false</code></pre>
+</doc-codeblock></div>
+<hr>
+<doc-anchor-target id="применение-stack">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#применение-stack">#</doc-anchor-trigger>
+        <span>Применение <code v-pre>Stack</code></span>
+    </h3>
+</doc-anchor-target>
+<p><strong>1. Обратный порядок (реверс) данных</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">function reverseString(str) {
+  const stack = new Stack();
+  for (const char of str) {
+    stack.push(char);
+  }
+
+  let reversed = &quot;&quot;;
+  while (!stack.isEmpty()) {
+    reversed += stack.pop();
+  }
+  return reversed;
+}
+
+console.log(reverseString(&quot;hello&quot;)); // &quot;olleh&quot;</code></pre>
+</doc-codeblock></div>
+<p><strong>2. Проверка сбалансированности скобок</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">function isBalanced(expression) {
+  const stack = new Stack();
+  const pairs = { &quot;)&quot;: &quot;(&quot;, &quot;}&quot;: &quot;{&quot;, &quot;]&quot;: &quot;[&quot; };
+
+  for (const char of expression) {
+    if (Object.values(pairs).includes(char)) {
+      stack.push(char);
+    } else if (Object.keys(pairs).includes(char)) {
+      if (stack.isEmpty() || stack.pop() !== pairs[char]) {
+        return false;
+      }
+    }
+  }
+
+  return stack.isEmpty();
+}
+
+console.log(isBalanced(&quot;{[()]}&quot;)); // true
+console.log(isBalanced(&quot;{[(])}&quot;)); // false</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="заключение">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#заключение">#</doc-anchor-trigger>
+        <span>Заключение</span>
+    </h4>
+</doc-anchor-target>
+<p><code v-pre>Stack</code> — это удобная структура данных, которая позволяет управлять элементами по принципу <code v-pre>LIFO</code> (последний вошел – первый вышел). Она широко применяется в различных алгоритмах, таких как обратный порядок строк, проверка выражений, рекурсия и обработка вызовов функций.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -318,6 +489,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Stack", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Stack", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
