@@ -135,9 +135,9 @@ authors:
 
 [!badge variant="contrast" text="Set"](Структуры_данных/Set.md) - Это встроенный объект, представляющий собой коллекцию уникальных значений.
 
-[!badge variant="contrast" text="Queue"](Структуры_данных/Queue.md) - В разработке (Очередь)
+[!badge variant="contrast" text="Queue"](Структуры_данных/Queue.md) - Это структура данных, которая работает по принципу `FIFO` (First In, First Out). Это означает, что первый элемент, который добавляется в очередь, будет первым извлечен.
 
-[!badge variant="contrast" text="Stack"](Структуры_данных/Stack.md) - В разработке (Стек)
+[!badge variant="contrast" text="Stack"](Структуры_данных/Stack.md) - Это структура данных, работающая по принципу `LIFO` (Last In, First Out), что означает: последний добавленный элемент извлекается первым.
 
 [!badge variant="contrast" text="LinkedList"](Структуры_данных/LinkedList.md) - В разработке (Связанный список)
 
